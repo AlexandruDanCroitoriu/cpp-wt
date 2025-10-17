@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -pthread -O3 -DNDEBUG CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/000-Server/Server.cpp.o CMakeFiles/app.dir/src/001-App/App.cpp.o -o app  -lwthttp -lwt -lwtdbo -lwtdbosqlite3 
