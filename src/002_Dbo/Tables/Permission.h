@@ -1,4 +1,7 @@
 #pragma once
+
+#include <string>
+
 #include <Wt/Dbo/Types.h>
 #include <Wt/WGlobal.h>
 

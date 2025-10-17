@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13...3.22)
 include(FetchContent)
 include(ExternalProject)
 
-project(app)
+project(cpp-wt)
 
 # Set number of parallel build jobs to number of available processors
 include(ProcessorCount)
@@ -65,9 +65,9 @@ set(SOURCES
     ${SOURCE_DIR}/002_Dbo/Tables/User.cpp
     ${SOURCE_DIR}/002_Dbo/Tables/Permission.cpp
 
-    # ${SOURCE_DIR}/005-Auth/AuthWidget.cpp
-    # ${SOURCE_DIR}/005-Auth/RegistrationView.cpp
-    # ${SOURCE_DIR}/005-Auth/UserDetailsModel.cpp
+  ${SOURCE_DIR}/003_Auth/AuthWidget.cpp
+  ${SOURCE_DIR}/003_Auth/RegistrationView.cpp
+  ${SOURCE_DIR}/003_Auth/UserDetailsModel.cpp
 
     # ${SOURCE_DIR}/006-Navigation/Navigation.cpp
     

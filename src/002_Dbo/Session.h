@@ -1,7 +1,12 @@
 #pragma once
 
-#include <Wt/Auth/Login.h>
+#include <memory>
+#include <string>
+#include <vector>
+
 #include <Wt/Auth/Dbo/UserDatabase.h>
+#include <Wt/Auth/Login.h>
+#include <Wt/Auth/OAuthService.h>
 
 #include <Wt/Dbo/Session.h>
 #include <Wt/Dbo/ptr.h>
@@ -20,7 +25,7 @@ public:
   explicit Session(const std::string& sqliteDb);
 
   dbo::ptr<User> user() const;
-  dbo::ptr<User> user(const Wt::Auth::User& user);
+  dbo::ptr<User> user(const Wt::Auth::User& authUser);
 
   Wt::Auth::AbstractUserDatabase& users();
   Wt::Auth::Login& login() { return login_; }

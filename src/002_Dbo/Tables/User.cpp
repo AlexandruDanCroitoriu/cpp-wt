@@ -6,11 +6,11 @@
 DBO_INSTANTIATE_TEMPLATES(User)
 
 User::User(const std::string& name)
-  : name_(name), ui_dark_mode_(false), ui_penguin_theme_name_("arctic")
+  : name_(name), uiDarkMode_(false), uiPenguinThemeName_("arctic")
 {
 }
 
-bool User::hasPermission(const Wt::Dbo::ptr<Permission> permission) const
+bool User::hasPermission(const Wt::Dbo::ptr<Permission>& permission) const
 {
   for (const auto& perm : permissions_) {
     if (perm->name_.compare(permission->name_) == 0) {

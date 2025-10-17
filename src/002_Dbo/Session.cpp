@@ -2,59 +2,70 @@
 #include "002_Dbo/Tables/Permission.h"
 #include "000_Server/Server.h"
 
+#include <Wt/Dbo/SqlConnection.h>
 #include <Wt/Dbo/backend/Sqlite3.h>
 #include <Wt/Dbo/backend/Postgres.h>
 #include <Wt/Auth/Identity.h>
 #include <Wt/Auth/PasswordService.h>
 
-using namespace Wt;
+
+#include <cstdlib>
+#include <memory>
+#include <stdexcept>
 
 
 Session::Session(const std::string &sqliteDb)
 {
+  std::unique_ptr<Wt::Dbo::SqlConnection> connection;
+
   #ifdef DEBUG
-    // Debug mode - use SQLite
-    auto connection = std::make_unique<Dbo::backend::Sqlite3>(sqliteDb);
-    connection->setProperty("show-queries", "true");
-    Wt::log("info") << "Using SQLite database in debug mode";
+  // Debug mode - use SQLite
+  auto sqliteConnection = std::make_unique<Wt::Dbo::backend::Sqlite3>(sqliteDb);
+  sqliteConnection->setProperty("show-queries", "true");
+  Wt::log("info") << "Using SQLite database in debug mode";
+  connection = std::move(sqliteConnection);
+  #else
+  // Production mode - use PostgreSQL
+  const char *postgresHost = std::getenv("POSTGRES_HOST");
+  if (!postgresHost) {
+    throw std::runtime_error("POSTGRES_HOST environment variable is not set");
+  }
+
+  const char *postgresPort = std::getenv("POSTGRES_PORT");
+  if (!postgresPort) {
+    throw std::runtime_error("POSTGRES_PORT environment variable is not set");
+  }
+
+  const char *postgresDatabase = std::getenv("POSTGRES_DBNAME");
+  if (!postgresDatabase) {
+    throw std::runtime_error("POSTGRES_DBNAME environment variable is not set");
+  }
+
+  const char *postgresUser = std::getenv("POSTGRES_USER");
+  if (!postgresUser) {
+    throw std::runtime_error("POSTGRES_USER environment variable is not set");
+  }
+
+  const char *postgresPassword = std::getenv("POSTGRES_PASSWORD");
+  if (!postgresPassword) {
+    throw std::runtime_error("POSTGRES_PASSWORD environment variable is not set");
+  }
+
+  std::string postgresConnectionString = "host=" + std::string(postgresHost) +
+                  " port=" + std::string(postgresPort) +
+                  " dbname=" + std::string(postgresDatabase) +
+                  " user=" + std::string(postgresUser) +
+                  " password=" + std::string(postgresPassword);
+
+  auto postgresConnection = std::make_unique<Wt::Dbo::backend::Postgres>(postgresConnectionString.c_str());
+  Wt::log("info") << "Using PostgreSQL database in production mode";
+  connection = std::move(postgresConnection);
   #endif
 
-  #ifndef RELEASE
-    // Production mode - use PostgreSQL
-    const char *postgres_host = std::getenv("POSTGRES_HOST");
-    if (!postgres_host) {
-      throw std::runtime_error("POSTGRES_HOST environment variable is not set");
-    }
+  if (!connection) {
+    throw std::runtime_error("Database connection was not initialised");
+  }
 
-    const char *postgres_port = std::getenv("POSTGRES_PORT");
-    if (!postgres_port) {
-      throw std::runtime_error("POSTGRES_PORT environment variable is not set");
-    }
-
-    const char *postgres_dbname = std::getenv("POSTGRES_DBNAME");
-    if (!postgres_dbname) {
-      throw std::runtime_error("POSTGRES_DBNAME environment variable is not set");
-    }
-
-    const char *postgres_user = std::getenv("POSTGRES_USER");
-    if (!postgres_user) {
-      throw std::runtime_error("POSTGRES_USER environment variable is not set");
-    }
-
-    const char *postgres_password = std::getenv("POSTGRES_PASSWORD");
-    if (!postgres_password) {
-      throw std::runtime_error("POSTGRES_PASSWORD environment variable is not set");
-    }
-
-    std::string postgres_conn_str = "host=" + std::string(postgres_host) + 
-                    " port=" + std::string(postgres_port) +
-                    " dbname=" + std::string(postgres_dbname) + 
-                    " user=" + std::string(postgres_user) + 
-                    " password=" + std::string(postgres_password);
-    auto connection = std::make_unique<Dbo::backend::Postgres>(postgres_conn_str.c_str());
-    Wt::log("info") << "Using PostgreSQL database in production mode";
-  #endif
-  
   setConnection(std::move(connection));
 
   mapClass<User>("user");
@@ -80,7 +91,7 @@ Session::Session(const std::string &sqliteDb)
 }
 
 
-Auth::AbstractUserDatabase& Session::users()
+Wt::Auth::AbstractUserDatabase& Session::users()
 {
   return *users_;
 }
@@ -108,17 +119,17 @@ dbo::ptr<User> Session::user(const Wt::Auth::User& authUser)
   return user;
 }
 
-const Auth::AuthService& Session::auth()
+const Wt::Auth::AuthService& Session::auth()
 {
   return Server::authService;
 }
 
-const Auth::PasswordService& Session::passwordAuth()
+const Wt::Auth::PasswordService& Session::passwordAuth()
 {
   return Server::passwordService;
 }
 
-std::vector<const Auth::OAuthService *> Session::oAuth()
+std::vector<const Wt::Auth::OAuthService *> Session::oAuth()
 {
   std::vector<const Wt::Auth::OAuthService *> result;
   result.reserve(Server::oAuthServices.size());
@@ -152,12 +163,12 @@ void Session::createInitialData()
   {
     Wt::Dbo::Transaction t(*this);
     
-    Wt::Dbo::ptr<Permission> stylus_permission = find<Permission>()
+    Wt::Dbo::ptr<Permission> stylusPermission = find<Permission>()
       .where("name = ?")
       .bind("STYLUS");
     
-    if (!stylus_permission) {
-      stylus_permission = add(std::make_unique<Permission>("STYLUS"));
+    if (!stylusPermission) {
+      stylusPermission = add(std::make_unique<Permission>("STYLUS"));
       Wt::log("info") << "Created STYLUS permission.";
     }
     
@@ -191,11 +202,11 @@ void Session::createInitialData()
     Wt::Dbo::Transaction t(*this);
     
     // Reload the permission within this transaction
-    Wt::Dbo::ptr<Permission> stylus_permission = find<Permission>()
+    Wt::Dbo::ptr<Permission> stylusPermission = find<Permission>()
       .where("name = ?")
       .bind("STYLUS");
     
-    adminUser.modify()->permissions_.insert(stylus_permission);
+    adminUser.modify()->permissions_.insert(stylusPermission);
     t.commit();
   }
   

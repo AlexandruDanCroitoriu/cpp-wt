@@ -1,6 +1,10 @@
 #pragma once
+
+#include <string>
+
 #include <Wt/Dbo/Types.h>
 #include <Wt/WGlobal.h>
+
 #include "002_Dbo/Tables/Permission.h"
 
 class User;
@@ -13,19 +17,19 @@ public:
   explicit User(const std::string& name);
 
   std::string name_;
-  bool ui_dark_mode_;
-  std::string ui_penguin_theme_name_;
+  bool uiDarkMode_;
+  std::string uiPenguinThemeName_;
   Wt::Dbo::weak_ptr<AuthInfo> authInfo_;
   Wt::Dbo::collection< Wt::Dbo::ptr<Permission> > permissions_;
 
-  bool hasPermission(const Wt::Dbo::ptr<Permission> permission) const;
+  bool hasPermission(const Wt::Dbo::ptr<Permission>& permission) const;
 
   template<class Action>
   void persist(Action& a)
   {
     Wt::Dbo::field(a, name_, "name");
-    Wt::Dbo::field(a, ui_dark_mode_, "ui_dark_mode");
-    Wt::Dbo::field(a, ui_penguin_theme_name_, "ui_penguin_theme_name");
+    Wt::Dbo::field(a, uiDarkMode_, "ui_dark_mode");
+    Wt::Dbo::field(a, uiPenguinThemeName_, "ui_penguin_theme_name");
     Wt::Dbo::hasOne(a, authInfo_, "user");
     Wt::Dbo::hasMany(a, permissions_, Wt::Dbo::ManyToMany, "users_permissions");
   }

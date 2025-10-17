@@ -1,26 +1,33 @@
 #pragma once
+
 #include <Wt/WApplication.h>
+
 #include "002_Dbo/Session.h"
 
 // #include "101-Stylus/Stylus.h"
 // #include "002-Theme/Theme.h"
-// #include "005-Auth/AuthWidget.h"
+#include "003_Auth/AuthWidget.h"
+
+namespace Wt {
+    class WContainerWidget;
+    class WDialog;
+}
 
 class App : public Wt::WApplication
 {
 public:
-    App(const Wt::WEnvironment &env);
+    App(const Wt::WEnvironment& env);
 
     // Wt::Signal<bool> dark_mode_changed_;
     // Wt::Signal<ThemeConfig> theme_changed_;
-    // Wt::WDialog* auth_dialog_;
     
 private:
+    Wt::WDialog* authDialog_ = nullptr;
     Session session_;
     // // Stylus::Stylus* stylus_ = nullptr;
-    // void authEvent();
+    void authEvent();
     // Wt::WContainerWidget* app_content_;
-    // void createApp();
-    // AuthWidget* auth_widget_;
-    // Wt::WContainerWidget* app_root_;
+    void createApp();
+    AuthWidget* authWidget_ = nullptr;
+    Wt::WContainerWidget* appRoot_ = nullptr;
 };

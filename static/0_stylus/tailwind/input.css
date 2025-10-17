@@ -1,4 +1,4 @@
 @import "tailwindcss";
 
-@source "../xml/";
-@source "../../../src/";
+@source "../xml/**";
+@source "../../../src/**";

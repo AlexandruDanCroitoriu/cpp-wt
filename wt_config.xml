@@ -62,31 +62,20 @@
       <session-id-cookie>false</session-id-cookie>
       <cookie-checks>true</cookie-checks>
       <head-matter>
-        <meta name="" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head-matter>
       <http-headers>
         <header name="X-Content-Type-Options" content="nosniff" />
-        <!-- <header name="Strict-Transport-Security" content="max-age=15724800; includeSubDomains" /> -->
+        <header name="Strict-Transport-Security" content="max-age=15724800; includeSubDomains" />
         <header name="Referrer-Policy" content="strict-origin-when-cross-origin" />
       </http-headers>
       <x-frame-same-origin>true</x-frame-same-origin>
       <use-script-nonce>false</use-script-nonce>
-      <allowed-origins></allowed-origins>
+      <allowed-origins>
+      </allowed-origins>
       <properties>
           <property name="resourcesURL">resources/</property>
-          <property name="favicon">favicon.svg</property>
-          
-          <!-- OAuth Configuration (disabled for development) -->
-          <!-- Uncomment and configure these if you want OAuth support -->
-          <!--
-          <property name="google-oauth2-redirect-endpoint">https://yoursite.com/oauth/google</property>
-          <property name="google-oauth2-client-id">your-google-client-id</property>
-          <property name="google-oauth2-client-secret">your-google-client-secret</property>
-          
-          <property name="facebook-oauth2-redirect-endpoint">https://yoursite.com/oauth/facebook</property>
-          <property name="facebook-oauth2-app-id">your-facebook-app-id</property>
-          <property name="facebook-oauth2-app-secret">your-facebook-app-secret</property>
-          -->
+          <property name="favicon">static/favicon.svg</property>
       </properties>
   </application-settings>
 </server>
