@@ -1,1 +1,0 @@
-/usr/bin/c++  -g -pthread -g CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/000_Server/Server.cpp.o CMakeFiles/app.dir/src/001_App/App.cpp.o CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o -o app  -lwthttp -lwt -lwtdbo -lwtdbosqlite3 -lwtdbopostgres 

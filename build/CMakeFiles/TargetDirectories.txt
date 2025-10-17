@@ -1,4 +1,0 @@
-/home/alex/github-repos/cpp-wt/build/CMakeFiles/app.dir
-/home/alex/github-repos/cpp-wt/build/CMakeFiles/run.dir
-/home/alex/github-repos/cpp-wt/build/CMakeFiles/edit_cache.dir
-/home/alex/github-repos/cpp-wt/build/CMakeFiles/rebuild_cache.dir
