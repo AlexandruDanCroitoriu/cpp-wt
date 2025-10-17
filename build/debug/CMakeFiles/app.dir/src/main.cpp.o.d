@@ -1,6 +1,6 @@
 CMakeFiles/app.dir/src/main.cpp.o: \
  /home/alex/github-repos/cpp-wt/src/main.cpp /usr/include/stdc-predef.h \
- /home/alex/github-repos/cpp-wt/src/000-Server/Server.h \
+ /home/alex/github-repos/cpp-wt/src/000_Server/Server.h \
  /usr/local/include/Wt/WServer.h /usr/local/include/Wt/WApplication.h \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/type_traits \
@@ -228,8 +228,8 @@ CMakeFiles/app.dir/src/main.cpp.o: \
  /usr/local/include/Wt/WJavaScriptPreamble.h \
  /usr/local/include/Wt/WMessageResourceBundle.h \
  /usr/local/include/Wt/WLocalizedStrings.h \
- /home/alex/github-repos/cpp-wt/src/001-App/App.h \
- /home/alex/github-repos/cpp-wt/src/002-Dbo/Session.h \
+ /home/alex/github-repos/cpp-wt/src/001_App/App.h \
+ /home/alex/github-repos/cpp-wt/src/002_Dbo/Session.h \
  /usr/local/include/Wt/Auth/Login.h /usr/local/include/Wt/Auth/User.h \
  /usr/local/include/Wt/WDateTime.h /usr/local/include/Wt/Auth/Token.h \
  /usr/local/include/Wt/Auth/WAuthGlobal.h \
@@ -272,5 +272,5 @@ CMakeFiles/app.dir/src/main.cpp.o: \
  /usr/local/include/Wt/WTime.h /usr/local/include/Wt/Json/Object.h \
  /usr/local/include/Wt/Json/Array.h /usr/local/include/Wt/Json/Parser.h \
  /usr/local/include/Wt/Json/Serializer.h \
- /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.h \
- /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.h
+ /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.h \
+ /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.h

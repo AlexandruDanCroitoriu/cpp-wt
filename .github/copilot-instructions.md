@@ -9,6 +9,11 @@ It contains my personal CV page and various examples of utilizing Wt to develop 
 - **`/src`**: Contains the C++ source code organized in folders with numeric prefixes (e.g., `001_`, `002_`, etc.)
 - **`/resources`**: Contains the resource files from Wt library (**⚠️ DO NOT EDIT ⚠️**)
 - **`/static`**: Contains static files such as CSS, JavaScript, and images used in the web application.
+- **`/static/0-stylus`**: Contains xml files, tailwind configuration and js files. Those files are manadged by stylus widgets to create edit and delete xml templates, tailwind configuration and js files.
+- **`/build/debug`**: Directory for debug build artifacts.
+- **`/build/release`**: Directory for release build artifacts.
+- **`CMakeLists.txt`**: CMake build configuration file.
+
 
 
 ## Libraries and Frameworks

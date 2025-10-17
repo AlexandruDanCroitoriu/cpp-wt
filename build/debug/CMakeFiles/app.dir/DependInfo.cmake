@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/alex/github-repos/cpp-wt/src/000-Server/Server.cpp" "CMakeFiles/app.dir/src/000-Server/Server.cpp.o" "gcc" "CMakeFiles/app.dir/src/000-Server/Server.cpp.o.d"
-  "/home/alex/github-repos/cpp-wt/src/001-App/App.cpp" "CMakeFiles/app.dir/src/001-App/App.cpp.o" "gcc" "CMakeFiles/app.dir/src/001-App/App.cpp.o.d"
-  "/home/alex/github-repos/cpp-wt/src/002-Dbo/Session.cpp" "CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o" "gcc" "CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o.d"
-  "/home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.cpp" "CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o" "gcc" "CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o.d"
-  "/home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.cpp" "CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o" "gcc" "CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o.d"
+  "/home/alex/github-repos/cpp-wt/src/000_Server/Server.cpp" "CMakeFiles/app.dir/src/000_Server/Server.cpp.o" "gcc" "CMakeFiles/app.dir/src/000_Server/Server.cpp.o.d"
+  "/home/alex/github-repos/cpp-wt/src/001_App/App.cpp" "CMakeFiles/app.dir/src/001_App/App.cpp.o" "gcc" "CMakeFiles/app.dir/src/001_App/App.cpp.o.d"
+  "/home/alex/github-repos/cpp-wt/src/002_Dbo/Session.cpp" "CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o" "gcc" "CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o.d"
+  "/home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.cpp" "CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o" "gcc" "CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o.d"
+  "/home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.cpp" "CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o" "gcc" "CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o.d"
   "/home/alex/github-repos/cpp-wt/src/main.cpp" "CMakeFiles/app.dir/src/main.cpp.o" "gcc" "CMakeFiles/app.dir/src/main.cpp.o.d"
   )
 

@@ -1,5 +1,5 @@
-#include "000-Server/Server.h"
-#include "001-App/App.h"
+#include "000_Server/Server.h"
+#include "001_App/App.h"
 #include <Wt/WLogger.h>
 
 int main(int argc, char **argv)

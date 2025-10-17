@@ -1,32 +1,32 @@
 [
 {
   "directory": "/home/alex/github-repos/cpp-wt/build",
-  "command": "/usr/bin/clang++-13 -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/main.cpp.o -c /home/alex/github-repos/cpp-wt/src/main.cpp",
+  "command": "/usr/bin/clang++-13 -DDEBUG -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/main.cpp.o -c /home/alex/github-repos/cpp-wt/src/main.cpp",
   "file": "/home/alex/github-repos/cpp-wt/src/main.cpp"
 },
 {
   "directory": "/home/alex/github-repos/cpp-wt/build",
-  "command": "/usr/bin/clang++-13 -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/000-Server/Server.cpp.o -c /home/alex/github-repos/cpp-wt/src/000-Server/Server.cpp",
-  "file": "/home/alex/github-repos/cpp-wt/src/000-Server/Server.cpp"
+  "command": "/usr/bin/clang++-13 -DDEBUG -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/000_Server/Server.cpp.o -c /home/alex/github-repos/cpp-wt/src/000_Server/Server.cpp",
+  "file": "/home/alex/github-repos/cpp-wt/src/000_Server/Server.cpp"
 },
 {
   "directory": "/home/alex/github-repos/cpp-wt/build",
-  "command": "/usr/bin/clang++-13 -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/001-App/App.cpp.o -c /home/alex/github-repos/cpp-wt/src/001-App/App.cpp",
-  "file": "/home/alex/github-repos/cpp-wt/src/001-App/App.cpp"
+  "command": "/usr/bin/clang++-13 -DDEBUG -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/001_App/App.cpp.o -c /home/alex/github-repos/cpp-wt/src/001_App/App.cpp",
+  "file": "/home/alex/github-repos/cpp-wt/src/001_App/App.cpp"
 },
 {
   "directory": "/home/alex/github-repos/cpp-wt/build",
-  "command": "/usr/bin/clang++-13 -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o -c /home/alex/github-repos/cpp-wt/src/002-Dbo/Session.cpp",
-  "file": "/home/alex/github-repos/cpp-wt/src/002-Dbo/Session.cpp"
+  "command": "/usr/bin/clang++-13 -DDEBUG -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o -c /home/alex/github-repos/cpp-wt/src/002_Dbo/Session.cpp",
+  "file": "/home/alex/github-repos/cpp-wt/src/002_Dbo/Session.cpp"
 },
 {
   "directory": "/home/alex/github-repos/cpp-wt/build",
-  "command": "/usr/bin/clang++-13 -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o -c /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.cpp",
-  "file": "/home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.cpp"
+  "command": "/usr/bin/clang++-13 -DDEBUG -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o -c /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.cpp",
+  "file": "/home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.cpp"
 },
 {
   "directory": "/home/alex/github-repos/cpp-wt/build",
-  "command": "/usr/bin/clang++-13 -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o -c /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.cpp",
-  "file": "/home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.cpp"
+  "command": "/usr/bin/clang++-13 -DDEBUG -I/home/alex/github-repos/cpp-wt/src  -g -pthread -g -std=gnu++17 -o CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o -c /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.cpp",
+  "file": "/home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.cpp"
 }
 ]

@@ -83,94 +83,94 @@ CMakeFiles/app.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/main.cpp -o CMakeFiles/app.dir/src/main.cpp.s
 
-CMakeFiles/app.dir/src/000-Server/Server.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/000-Server/Server.cpp.o: ../../src/000-Server/Server.cpp
-CMakeFiles/app.dir/src/000-Server/Server.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/000-Server/Server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/000-Server/Server.cpp.o -MF CMakeFiles/app.dir/src/000-Server/Server.cpp.o.d -o CMakeFiles/app.dir/src/000-Server/Server.cpp.o -c /home/alex/github-repos/cpp-wt/src/000-Server/Server.cpp
+CMakeFiles/app.dir/src/000_Server/Server.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/000_Server/Server.cpp.o: ../../src/000_Server/Server.cpp
+CMakeFiles/app.dir/src/000_Server/Server.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/000_Server/Server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/000_Server/Server.cpp.o -MF CMakeFiles/app.dir/src/000_Server/Server.cpp.o.d -o CMakeFiles/app.dir/src/000_Server/Server.cpp.o -c /home/alex/github-repos/cpp-wt/src/000_Server/Server.cpp
 
-CMakeFiles/app.dir/src/000-Server/Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/000-Server/Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/000-Server/Server.cpp > CMakeFiles/app.dir/src/000-Server/Server.cpp.i
+CMakeFiles/app.dir/src/000_Server/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/000_Server/Server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/000_Server/Server.cpp > CMakeFiles/app.dir/src/000_Server/Server.cpp.i
 
-CMakeFiles/app.dir/src/000-Server/Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/000-Server/Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/000-Server/Server.cpp -o CMakeFiles/app.dir/src/000-Server/Server.cpp.s
+CMakeFiles/app.dir/src/000_Server/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/000_Server/Server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/000_Server/Server.cpp -o CMakeFiles/app.dir/src/000_Server/Server.cpp.s
 
-CMakeFiles/app.dir/src/001-App/App.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/001-App/App.cpp.o: ../../src/001-App/App.cpp
-CMakeFiles/app.dir/src/001-App/App.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/001-App/App.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/001-App/App.cpp.o -MF CMakeFiles/app.dir/src/001-App/App.cpp.o.d -o CMakeFiles/app.dir/src/001-App/App.cpp.o -c /home/alex/github-repos/cpp-wt/src/001-App/App.cpp
+CMakeFiles/app.dir/src/001_App/App.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/001_App/App.cpp.o: ../../src/001_App/App.cpp
+CMakeFiles/app.dir/src/001_App/App.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/001_App/App.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/001_App/App.cpp.o -MF CMakeFiles/app.dir/src/001_App/App.cpp.o.d -o CMakeFiles/app.dir/src/001_App/App.cpp.o -c /home/alex/github-repos/cpp-wt/src/001_App/App.cpp
 
-CMakeFiles/app.dir/src/001-App/App.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/001-App/App.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/001-App/App.cpp > CMakeFiles/app.dir/src/001-App/App.cpp.i
+CMakeFiles/app.dir/src/001_App/App.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/001_App/App.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/001_App/App.cpp > CMakeFiles/app.dir/src/001_App/App.cpp.i
 
-CMakeFiles/app.dir/src/001-App/App.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/001-App/App.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/001-App/App.cpp -o CMakeFiles/app.dir/src/001-App/App.cpp.s
+CMakeFiles/app.dir/src/001_App/App.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/001_App/App.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/001_App/App.cpp -o CMakeFiles/app.dir/src/001_App/App.cpp.s
 
-CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o: ../../src/002-Dbo/Session.cpp
-CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o -MF CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o.d -o CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o -c /home/alex/github-repos/cpp-wt/src/002-Dbo/Session.cpp
+CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o: ../../src/002_Dbo/Session.cpp
+CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o -MF CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o.d -o CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o -c /home/alex/github-repos/cpp-wt/src/002_Dbo/Session.cpp
 
-CMakeFiles/app.dir/src/002-Dbo/Session.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/002-Dbo/Session.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/002-Dbo/Session.cpp > CMakeFiles/app.dir/src/002-Dbo/Session.cpp.i
+CMakeFiles/app.dir/src/002_Dbo/Session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/002_Dbo/Session.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/002_Dbo/Session.cpp > CMakeFiles/app.dir/src/002_Dbo/Session.cpp.i
 
-CMakeFiles/app.dir/src/002-Dbo/Session.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/002-Dbo/Session.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/002-Dbo/Session.cpp -o CMakeFiles/app.dir/src/002-Dbo/Session.cpp.s
+CMakeFiles/app.dir/src/002_Dbo/Session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/002_Dbo/Session.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/002_Dbo/Session.cpp -o CMakeFiles/app.dir/src/002_Dbo/Session.cpp.s
 
-CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o: ../../src/002-Dbo/Tables/User.cpp
-CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o -MF CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o.d -o CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o -c /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.cpp
+CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o: ../../src/002_Dbo/Tables/User.cpp
+CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o -MF CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o.d -o CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o -c /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.cpp
 
-CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.cpp > CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.i
+CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.cpp > CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.i
 
-CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/User.cpp -o CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.s
+CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/User.cpp -o CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.s
 
-CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o: ../../src/002-Dbo/Tables/Permission.cpp
-CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o -MF CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o.d -o CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o -c /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.cpp
+CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o: ../../src/002_Dbo/Tables/Permission.cpp
+CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o -MF CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o.d -o CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o -c /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.cpp
 
-CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.cpp > CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.i
+CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.cpp > CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.i
 
-CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/002-Dbo/Tables/Permission.cpp -o CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.s
+CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/github-repos/cpp-wt/src/002_Dbo/Tables/Permission.cpp -o CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.s
 
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/src/main.cpp.o" \
-"CMakeFiles/app.dir/src/000-Server/Server.cpp.o" \
-"CMakeFiles/app.dir/src/001-App/App.cpp.o" \
-"CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o" \
-"CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o" \
-"CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o"
+"CMakeFiles/app.dir/src/000_Server/Server.cpp.o" \
+"CMakeFiles/app.dir/src/001_App/App.cpp.o" \
+"CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o" \
+"CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o" \
+"CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
 app: CMakeFiles/app.dir/src/main.cpp.o
-app: CMakeFiles/app.dir/src/000-Server/Server.cpp.o
-app: CMakeFiles/app.dir/src/001-App/App.cpp.o
-app: CMakeFiles/app.dir/src/002-Dbo/Session.cpp.o
-app: CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o
-app: CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o
+app: CMakeFiles/app.dir/src/000_Server/Server.cpp.o
+app: CMakeFiles/app.dir/src/001_App/App.cpp.o
+app: CMakeFiles/app.dir/src/002_Dbo/Session.cpp.o
+app: CMakeFiles/app.dir/src/002_Dbo/Tables/User.cpp.o
+app: CMakeFiles/app.dir/src/002_Dbo/Tables/Permission.cpp.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/github-repos/cpp-wt/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable app"

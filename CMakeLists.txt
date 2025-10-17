@@ -14,6 +14,14 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -pthread")
+
+# Define DEBUG macro for Debug build type and RELEASE for Release builds.
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  add_compile_definitions(DEBUG)
+elseif(CMAKE_BUILD_TYPE MATCHES Release)
+  add_compile_definitions(RELEASE)
+endif()
+
 set(RLIB --docroot ../../ -c ../../wt_config.xml --http-address 0.0.0.0 --http-port 9020)
 set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/src/)
 
@@ -39,9 +47,9 @@ include_directories(${SOURCE_DIR})
 set(SOURCES
     ${SOURCE_DIR}/main.cpp
     
-    ${SOURCE_DIR}/000-Server/Server.cpp
+    ${SOURCE_DIR}/000_Server/Server.cpp
     
-    ${SOURCE_DIR}/001-App/App.cpp
+    ${SOURCE_DIR}/001_App/App.cpp
     
     # ${SOURCE_DIR}/002-Theme/Theme.cpp
     # ${SOURCE_DIR}/002-Theme/ThemeSwitcher.cpp
@@ -53,9 +61,9 @@ set(SOURCES
     # ${SOURCE_DIR}/003-Components/VoiceRecorder.cpp
     # ${SOURCE_DIR}/003-Components/WhisperWrapper.cpp
     
-    ${SOURCE_DIR}/002-Dbo/Session.cpp
-    ${SOURCE_DIR}/002-Dbo/Tables/User.cpp
-    ${SOURCE_DIR}/002-Dbo/Tables/Permission.cpp
+    ${SOURCE_DIR}/002_Dbo/Session.cpp
+    ${SOURCE_DIR}/002_Dbo/Tables/User.cpp
+    ${SOURCE_DIR}/002_Dbo/Tables/Permission.cpp
 
     # ${SOURCE_DIR}/005-Auth/AuthWidget.cpp
     # ${SOURCE_DIR}/005-Auth/RegistrationView.cpp
@@ -73,6 +81,13 @@ set(SOURCES
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Ensure compile-time macros are available for multi-config generators as well
+target_compile_definitions(${PROJECT_NAME}
+  PRIVATE
+    $<$<CONFIG:Debug>:DEBUG>
+    $<$<CONFIG:Release>:RELEASE>
+)
 
 target_link_libraries(${PROJECT_NAME} 
     wthttp
