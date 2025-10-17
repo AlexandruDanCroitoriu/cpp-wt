@@ -1,0 +1,6 @@
+# ninja log v5
+44	648653	1760726344502847366	CMakeFiles/app.dir/src/main.cpp.o	11a3571ee3afd1c6
+45	649090	1760726345172847455	CMakeFiles/app.dir/src/001-App/App.cpp.o	dad31f7331f961ff
+47	651501	1760726347532847732	CMakeFiles/app.dir/src/002-Dbo/Tables/Permission.cpp.o	a03b2ef2f97577d8
+46	651590	1760726347622847742	CMakeFiles/app.dir/src/002-Dbo/Tables/User.cpp.o	c3f6944ee35914bf
+45	653217	1760726349302847931	CMakeFiles/app.dir/src/000-Server/Server.cpp.o	93c2f29df2d28542
