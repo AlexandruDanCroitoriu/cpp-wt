@@ -15,17 +15,22 @@ AuthWidget::AuthWidget(Session& session)
   : Wt::Auth::AuthWidget(Session::auth(), session.users(), session.login()),
     session_(session)
 { 
-  	// setInternalBasePath("/user");
+  // setInternalBasePath("/user");
+  wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth");
+  wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-login");
+  wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-strings");
+  wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-registration-view");
 
-    // wApp->messageResourceBundle().use("../static/stylus-resources/xml/003_Auth/ovrwt-auth");
-    // wApp->messageResourceBundle().use("../static/stylus-resources/xml/003_Auth/ovrwt-auth-login");
-    // wApp->messageResourceBundle().use("../static/stylus-resources/xml/003_Auth/ovrwt-auth-strings");
+  model()->addPasswordAuth(&Session::passwordAuth());
+  model()->addOAuth(Session::oAuth());
+  setRegistrationEnabled(true);
 
-    model()->addPasswordAuth(&Session::passwordAuth());
-    model()->addOAuth(Session::oAuth());
-    setRegistrationEnabled(true);
+  keyWentDown().connect([=](Wt::WKeyEvent e)
+  { 
+      wApp->globalKeyWentDown().emit(e); // Emit the global key event
+  });
 
-    // processEnvironment();
+  // processEnvironment();
 }
 
 std::unique_ptr<Wt::WWidget> AuthWidget::createRegistrationView(const Wt::Auth::Identity& id)
@@ -98,10 +103,10 @@ Wt::WDialog *AuthWidget::showDialog(const Wt::WString& title, std::unique_ptr<Wt
     dialog_->contents()->addWidget(std::move(contents));
     dialog_->setMinimumSize(Wt::WLength(100, Wt::LengthUnit::ViewportWidth), Wt::WLength(100, Wt::LengthUnit::ViewportHeight));
     dialog_->setMaximumSize(Wt::WLength(100, Wt::LengthUnit::ViewportWidth), Wt::WLength(100, Wt::LengthUnit::ViewportHeight));
-  dialog_->setStyleClass("absolute top-0 left-0 right-0 bottom-0 w-screen h-screen");
-  dialog_->setTitleBarEnabled(false);
+    dialog_->setStyleClass("absolute top-0 left-0 right-0 bottom-0 w-screen h-screen");
+    dialog_->setTitleBarEnabled(false);
     dialog_->escapePressed().connect([this]() { dialog_.reset(); });
-    dialog_->contents()->setStyleClass("min-h-screen min-w-screen m-1 p-1 flex items-center justify-center");
+    dialog_->contents()->setStyleClass("min-h-screen min-w-screen m-1 p-1 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-white");
     dialog_->contents()->childrenChanged().connect(this, [this]() { dialog_.reset(); });
 
     dialog_->footer()->hide();

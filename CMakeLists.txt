@@ -42,7 +42,7 @@ include_directories(${SOURCE_DIR})
 # )
 # FetchContent_MakeAvailable(whisper)
 
-# ./app --docroot ../ –config ./wt_config.xml --http-address 0.0.0.0 --http-port 9020
+# ./cpp-wt --docroot ../ –config ./wt_config.xml --http-address 0.0.0.0 --http-port 9020
 
 set(SOURCES
     ${SOURCE_DIR}/main.cpp
@@ -51,9 +51,8 @@ set(SOURCES
     
     ${SOURCE_DIR}/001_App/App.cpp
     
-    # ${SOURCE_DIR}/002-Theme/Theme.cpp
-    # ${SOURCE_DIR}/002-Theme/ThemeSwitcher.cpp
-    # ${SOURCE_DIR}/002-Theme/DarkModeToggle.cpp
+    ${SOURCE_DIR}/004_Theme/Theme.cpp
+    ${SOURCE_DIR}/004_Theme/DarkModeToggle.cpp
     
     # ${SOURCE_DIR}/003-Components/ComponentsDisplay.cpp
     # ${SOURCE_DIR}/003-Components/Button.cpp
@@ -131,7 +130,7 @@ target_link_libraries(${PROJECT_NAME}
 
 
 add_custom_target(run
-    COMMAND ${PROJECT_NAME} ${RLIB}
+    COMMAND $<TARGET_FILE:${PROJECT_NAME}> ${RLIB}
     DEPENDS ${PROJECT_NAME}
     WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
 )

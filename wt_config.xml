@@ -66,7 +66,7 @@
       </head-matter>
       <http-headers>
         <header name="X-Content-Type-Options" content="nosniff" />
-        <header name="Strict-Transport-Security" content="max-age=15724800; includeSubDomains" />
+        <header name="Strict-Transport-Security" content="max-age=31536000; includeSubDomains" />
         <header name="Referrer-Policy" content="strict-origin-when-cross-origin" />
       </http-headers>
       <x-frame-same-origin>true</x-frame-same-origin>
@@ -75,7 +75,7 @@
       </allowed-origins>
       <properties>
           <property name="resourcesURL">resources/</property>
-          <property name="favicon">static/favicon.svg</property>
+          <property name="favicon">${RUNDIR}/../../static/favicon.svg</property>
       </properties>
   </application-settings>
 </server>

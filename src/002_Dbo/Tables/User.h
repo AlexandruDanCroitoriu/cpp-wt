@@ -18,7 +18,6 @@ public:
 
   std::string name_;
   bool uiDarkMode_;
-  std::string uiPenguinThemeName_;
   Wt::Dbo::weak_ptr<AuthInfo> authInfo_;
   Wt::Dbo::collection< Wt::Dbo::ptr<Permission> > permissions_;
 
@@ -29,7 +28,6 @@ public:
   {
     Wt::Dbo::field(a, name_, "name");
     Wt::Dbo::field(a, uiDarkMode_, "ui_dark_mode");
-    Wt::Dbo::field(a, uiPenguinThemeName_, "ui_penguin_theme_name");
     Wt::Dbo::hasOne(a, authInfo_, "user");
     Wt::Dbo::hasMany(a, permissions_, Wt::Dbo::ManyToMany, "users_permissions");
   }

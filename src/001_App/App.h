@@ -5,8 +5,8 @@
 #include "002_Dbo/Session.h"
 
 // #include "101-Stylus/Stylus.h"
-// #include "002-Theme/Theme.h"
 #include "003_Auth/AuthWidget.h"
+#include "004_Theme/Theme.h"
 
 namespace Wt {
     class WContainerWidget;

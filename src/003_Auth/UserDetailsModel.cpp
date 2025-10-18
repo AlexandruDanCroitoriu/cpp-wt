@@ -27,5 +27,4 @@ void UserDetailsModel::save(const Wt::Auth::User& authUser)
   if (auto theme = wApp->theme()) {
     themeName = theme->name();
   }
-  user.modify()->uiPenguinThemeName_ = themeName;
 }

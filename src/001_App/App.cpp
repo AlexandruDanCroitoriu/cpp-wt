@@ -1,8 +1,8 @@
 #include "App.h"
 // #include "006-Navigation/Navigation.h"
 
-// #include "002-Theme/DarkModeToggle.h"
-// #include "002-Theme/ThemeSwitcher.h"
+// #include "004_Theme/DarkModeToggle.h"
+// #include "004_Theme/ThemeSwitcher.h"
 
 // #include "003-Components/ComponentsDisplay.h"
 // #include "008-AboutMe/AboutMe.h"
@@ -29,24 +29,28 @@ App::App(const Wt::WEnvironment& env)
 #endif
     // Title
     setTitle("Wt CPP app title");
-    // setHtmlClass("dark");
-    setCssTheme("polished");
-    useStyleSheet(docRoot() + "/static/css/tailwind.minify.css?v=" + Wt::WRandom::generateId()); // Cache busting
-
+    setHtmlClass("dark");
+    // setCssTheme("polished");
+    // #ifdef DEBUG
+    // useStyleSheet(docRoot() + "/static/css/tailwind.css?v=" + Wt::WRandom::generateId()); // Cache busting
+    // #elif RELEASE
+    // useStyleSheet(docRoot() + "/static/css/tailwind.minify.css");
+    // #endif
+    setBodyClass("min-h-screen min-w-screen bg-gray-50 text-gray-900 font-sans antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors");
     // require("https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4");
     // require("https://unpkg.com/vue@3/dist/vue.global.prod.js");
     // require("https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js");
     
-    // root()->addStyleClass("max-w-screen max-h-screen overflow-none font-body bg-surface text-on-surface");
     {
         // Load XML bundles that override the default Wt authentication templates.
         auto& bundle = wApp->messageResourceBundle();
+        
         bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth");
         bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-login");
         bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-strings");
         bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-registration-view");
     }
-
+    setTheme(std::make_shared<Theme>());
 
     authDialog_ = wApp->root()->addNew<Wt::WDialog>("");
     authDialog_->setTitleBarEnabled(false);
@@ -59,11 +63,12 @@ App::App(const Wt::WEnvironment& env)
     });
     authDialog_->setMinimumSize(Wt::WLength(100, Wt::LengthUnit::ViewportWidth), Wt::WLength(100, Wt::LengthUnit::ViewportHeight));
     authDialog_->setMaximumSize(Wt::WLength(100, Wt::LengthUnit::ViewportWidth), Wt::WLength(100, Wt::LengthUnit::ViewportHeight));
-    authDialog_->setStyleClass("absolute top-0 left-0 right-0 bottom-0 w-screen h-screen");
-    authDialog_->setMargin(Wt::WLength("-21em"), Wt::Side::Left); // .Wt-form width
-    authDialog_->setMargin(Wt::WLength("-200px"), Wt::Side::Top); // ???
-    authDialog_->contents()->setStyleClass("min-h-screen min-w-screen m-1 p-1 flex items-center justify-center bg-surface text-on-surface");
+    authDialog_->setStyleClass("absolute top-0 left-0 right-0 bottom-0 w-screen h-screen !bg-white dark:!bg-gray-900");
+    // authDialog_->setMargin(Wt::WLength("-21em"), Wt::Side::Left); // .Wt-form width
+    // authDialog_->setMargin(Wt::WLength("-200px"), Wt::Side::Top); // ???
+    // authDialog_->contents()->setStyleClass("min-h-screen min-w-screen m-1 p-1 flex items-center justify-center");
     authWidget_ = authDialog_->contents()->addWidget(std::make_unique<AuthWidget>(session_));
+    // authWidget_->addStyleClass("w-full max-w-md bg-white text-gray-900 border border-gray-200 rounded-xl shadow-lg p-6 space-y-4 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700 transition-colors");
     appRoot_ = root()->addNew<Wt::WContainerWidget>();
     
     session_.login().changed().connect(this, &App::authEvent);
@@ -75,8 +80,26 @@ App::App(const Wt::WEnvironment& env)
     #ifdef DEBUG
     Wt::log("debug") << "App::App() - Application instantiated";
     #endif
+    
+    authDialog_->show();
 
-    authWidget_->show();
+    wApp->globalKeyWentDown().connect([=](Wt::WKeyEvent e)
+    {
+        // Handle global key events here
+        if(e.modifiers().test(Wt::KeyboardModifier::Shift)){
+            if(e.key() == Wt::Key::Q){
+                if(authDialog_->isHidden()){
+                    authDialog_->show();
+                }else {
+                    authDialog_->hide();
+                }
+            }
+        }
+
+    });
+
+    auto button = root()->addNew<Wt::WPushButton>("Test Button");
+    
 
 }
 

@@ -4,6 +4,24 @@ applyTo: "src/**"
 
 ## Coding Standards
 
+### Tailwind classes for Theming
+
+### light mode
+- Background color: `bg-gray-50` or `bg-white`
+- Text color: `text-gray-900`
+- Border color: `border-gray-200`
+- Card/container background: `bg-white`
+- Subtle background areas: `bg-gray-100`
+- Hover states: `hover:bg-gray-150`
+
+### dark mode
+- Background color: `bg-gray-900` or `bg-gray-800`
+- Text color: `text-gray-100`
+- Border color: `border-gray-700`
+- Card/container background: `bg-gray-800`
+- Subtle background areas: `bg-gray-700`
+- Hover states: `hover:bg-gray-700`
+
 ### Naming Conventions
 
 #### Classes and Types
