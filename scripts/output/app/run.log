@@ -1,0 +1,73 @@
+[2025-10-19 23:57:57] [INFO] Starting run...
+[2025-10-19 23:57:57] [INFO] Project root: /home/alex/github-repos/cpp-wt
+[2025-10-19 23:57:57] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/run.log
+[2025-10-19 23:57:57] [INFO] Selected build type: debug
+[2025-10-19 23:57:57] [INFO] Document root: /home/alex/github-repos/cpp-wt/static;/home/alex/github-repos/cpp-wt/resources
+[2025-10-19 23:57:57] [INFO] HTTP address: 127.0.0.1
+[2025-10-19 23:57:57] [INFO] HTTP port: 8080
+[2025-10-19 23:57:57] [INFO] Deploy path: /
+[2025-10-19 23:57:57] [INFO] Wt arguments: --docroot /home/alex/github-repos/cpp-wt/static\;/home/alex/github-repos/cpp-wt/resources --http-address 127.0.0.1 --http-port 8080 --deploy-path /
+[2025-10-19 23:57:57] [INFO] Launching debug build from /home/alex/github-repos/cpp-wt/build/debug
+[2025-10-19 23:57:57] [INFO] Executable: /home/alex/github-repos/cpp-wt/build/debug/app
+Starting Wt server...
+[2025-Oct-19 23:57:57.957] 402456 - [info] "config: reading Wt config file: /etc/wt/wt_config.xml (location = './debug/app')"
+[2025-Oct-19 23:57:57.974] 402456 - [info] "WServer/wthttp: initializing built-in wthttpd"
+[2025-Oct-19 23:57:57.998] 402456 - [info] "wthttp: started server: http://127.0.0.1:8080"
+[2025-Oct-19 23:58:02.175] 402456 - [info] "Wt: session created (#sessions = 1)"
+[2025-Oct-19 23:58:02.175] 402456 [/ SXDGmCUSr7B68sWW] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-19 23:58:02.181] 402456 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2108"
+[2025-Oct-19 23:58:02.181] 402456 - [info] "WebRequest: took 9.903 ms"
+[2025-Oct-19 23:58:02.203] 402456 - [info] "Wt: session created (#sessions = 2)"
+[2025-Oct-19 23:58:02.203] 402456 [/ Rdlh6ZJqVwdgnR8q] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-19 23:58:02.203] 402456 [/ Rdlh6ZJqVwdgnR8q] [info] "Wt: signal from dead session, sending reload."
+[2025-Oct-19 23:58:02.203] 402456 - [info] "WebController: Removing session Rdlh6ZJqVwdgnR8q"
+[2025-Oct-19 23:58:02.203] 402456 [/ Rdlh6ZJqVwdgnR8q] [info] "Wt: session destroyed (#sessions = 1)"
+[2025-Oct-19 23:58:02.204] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=BDJ7p8H9NXFuHoHr HTTP/1.1 200 76"
+[2025-Oct-19 23:58:02.204] 402456 - [info] "WebRequest: took 9.308 ms"
+[2025-Oct-19 23:58:02.395] 402456 [/ SXDGmCUSr7B68sWW] [info] "Using SQLite database in debug mode"
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: rollback transaction
+[2025-Oct-19 23:58:02.457] 402456 [/ SXDGmCUSr7B68sWW] [info] "Using existing database"
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: select "id", "version", "name" from "permission"  where (name = ?)
+Dbo.backend.Sqlite3: commit transaction
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where (provider = ? AND identity = ?)
+[2025-Oct-19 23:58:02.459] 402456 [/ SXDGmCUSr7B68sWW] [info] "Admin user 'maxuli' already exists, skipping creation."
+Dbo.backend.Sqlite3: commit transaction
+[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/000_General/General_components.xml"
+[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-registration-view.xml"
+[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-auth-strings.xml"
+[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-auth-login.xml"
+[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-auth.xml"
+[2025-Oct-19 23:58:02.464] 402456 - [access] "wthttp: 127.0.0.1   GET /?wtd=SXDGmCUSr7B68sWW&request=style&page=1 HTTP/1.1 200 120"
+[2025-Oct-19 23:58:02.464] 402456 - [info] "WebRequest: took 207.002 ms"
+[2025-Oct-19 23:58:02.469] 402456 - [access] "wthttp: 127.0.0.1   GET /?wtd=SXDGmCUSr7B68sWW&sid=3127770082&webGL=true&scrW=1920&scrH=1080&tz=180&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=1554764229 HTTP/1.1 200 18200"
+[2025-Oct-19 23:58:02.469] 402456 - [info] "WebRequest: took 98.553 ms"
+[2025-Oct-19 23:58:02.491] 402456 - [info] "Wt: session created (#sessions = 2)"
+[2025-Oct-19 23:58:02.491] 402456 [/ 9TGimQa64yYXoXSY] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-19 23:58:02.491] 402456 - [info] "Wt: session created (#sessions = 3)"
+[2025-Oct-19 23:58:02.492] 402456 [/ ZatXX1d0i8nhMLhU] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-19 23:58:02.492] 402456 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=D194BuWEV0ftF12o HTTP/1.1 200 2151"
+[2025-Oct-19 23:58:02.492] 402456 - [info] "WebRequest: took 0.894 ms"
+[2025-Oct-19 23:58:02.492] 402456 - [access] "wthttp: 127.0.0.1   GET /resources/webkit-transitions.css HTTP/1.1 200 2131"
+[2025-Oct-19 23:58:02.492] 402456 - [info] "WebRequest: took 0.775 ms"
+[2025-Oct-19 23:58:02.493] 402456 - [info] "Wt: session created (#sessions = 4)"
+[2025-Oct-19 23:58:02.493] 402456 [/ IBqRaMvUW11Lj83W] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-19 23:58:02.493] 402456 - [access] "wthttp: 127.0.0.1   GET /resources/form.css HTTP/1.1 200 2128"
+[2025-Oct-19 23:58:02.493] 402456 - [info] "WebRequest: took 0.846 ms"
+[2025-Oct-19 23:58:03.209] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 1995"
+[2025-Oct-19 23:58:03.209] 402456 - [info] "WebRequest: took 0.518 ms"
+[2025-Oct-19 23:58:04.861] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 48"
+[2025-Oct-19 23:58:04.861] 402456 - [info] "WebRequest: took 0.509 ms"
+[2025-Oct-19 23:58:13.005] 402456 [/ 9TGimQa64yYXoXSY] [info] "WebController: timeout: expiring"
+[2025-Oct-19 23:58:13.005] 402456 [/ IBqRaMvUW11Lj83W] [info] "WebController: timeout: expiring"
+[2025-Oct-19 23:58:13.005] 402456 [/ ZatXX1d0i8nhMLhU] [info] "WebController: timeout: expiring"
+[2025-Oct-19 23:58:13.005] 402456 [/ 9TGimQa64yYXoXSY] [info] "Wt: session destroyed (#sessions = 1)"
+[2025-Oct-19 23:58:13.005] 402456 [/ IBqRaMvUW11Lj83W] [info] "Wt: session destroyed (#sessions = 1)"
+[2025-Oct-19 23:58:13.005] 402456 [/ ZatXX1d0i8nhMLhU] [info] "Wt: session destroyed (#sessions = 1)"
+[2025-Oct-19 23:58:43.859] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 48"
+[2025-Oct-19 23:58:43.859] 402456 - [info] "WebRequest: took 1.153 ms"
+[2025-Oct-19 23:58:45.836] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 48"
+[2025-Oct-19 23:58:45.836] 402456 - [info] "WebRequest: took 0.59 ms"
+[2025-10-19 23:58:48] [ERROR] Application exited with code 141

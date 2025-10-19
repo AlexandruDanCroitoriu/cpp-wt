@@ -2,6 +2,7 @@
 <!-- Created with Stylus Editor -->
 <messages>
     <message id="combobox.default">appearance-none rounded-radius border border-outline bg-surface-alt px-4 py-2 text-sm focus-visible:outline-2 text-on-surface focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-75</message>
+    <message id="checkbox.default">mr-2 text-blue-600 dark:text-blue-400</message>
     <message id="lineedit.default">w-full rounded-radius border border-outline bg-surface-alt px-2 py-2 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-75</message>
     <message id="btn.default">font-paragraph cursor-pointer inline-flex items-center justify-center border whitespace-nowrap px-4 py-2 font-medium text-center transition tracking-whide disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-2 active:opacity-100 disabled:opacity-75</message>
     <message id="btn.primary">rounded-radius bg-primary border-primary text-on-primary hover:opacity-75 focus-visible:outline-primary active:outline-offset-0</message>

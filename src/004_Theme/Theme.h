@@ -21,13 +21,13 @@ public:
 
     std::string name() const override;
     std::vector<Wt::WLinkedCssStyleSheet> styleSheets() const override;
-    void apply(Wt::WWidget *widget, Wt::WWidget *child, int widgetRole) const override;
-    void apply(Wt::WWidget *widget, Wt::DomElement& element, int elementRole) const override;
+    void apply(Wt::WWidget* widget, Wt::WWidget* child, int widgetRole) const override;
+    void apply(Wt::WWidget* widget, Wt::DomElement& element, int elementRole) const override;
     std::string disabledClass() const override;
     std::string activeClass() const override;
     std::string utilityCssClass(int utilityCssClassRole) const override;
     bool canStyleAnchorAsButton() const override;
-    void applyValidationStyle(Wt::WWidget *widget,
+    void applyValidationStyle(Wt::WWidget* widget,
                               const Wt::WValidator::Result& validation,
                               Wt::WFlags<Wt::ValidationStyleFlag> styles) const override;
     bool canBorderBoxElement(const Wt::DomElement& element) const override;

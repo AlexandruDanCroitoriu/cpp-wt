@@ -1,7 +1,7 @@
 #include "App.h"
 // #include "006-Navigation/Navigation.h"
 
-// #include "004_Theme/DarkModeToggle.h"
+#include "004_Theme/DarkModeToggle.h"
 // #include "004_Theme/ThemeSwitcher.h"
 
 // #include "003-Components/ComponentsDisplay.h"
@@ -80,8 +80,6 @@ App::App(const Wt::WEnvironment& env)
     #ifdef DEBUG
     Wt::log("debug") << "App::App() - Application instantiated";
     #endif
-    
-    authDialog_->show();
 
     wApp->globalKeyWentDown().connect([=](Wt::WKeyEvent e)
     {
@@ -97,10 +95,6 @@ App::App(const Wt::WEnvironment& env)
         }
 
     });
-
-    auto button = root()->addNew<Wt::WPushButton>("Test Button");
-    
-
 }
 
 void App::authEvent() {
@@ -109,16 +103,16 @@ void App::authEvent() {
         #ifdef DEBUG
         log("debug") << "User " << u.id() << " (" << u.identity(Wt::Auth::Identity::LoginName) << ")" << " logged in.";
         #endif
-        if (authDialog_->isVisible()) {
-            authDialog_->hide();
-        }
+        // if (authDialog_->isVisible()) {
+        //     authDialog_->hide();
+        // }
     } else {
         #ifdef DEBUG
         log("debug") << "User logged out.";
         #endif
-        if (!authDialog_->isVisible()) {
-            authDialog_->show();
-        }
+        // if (!authDialog_->isVisible()) {
+        //     authDialog_->show();
+        // }
     }
     createApp();
 }
@@ -150,10 +144,13 @@ void App::createApp()
         transaction.commit();
     }
 
+    auto button = root()->addNew<Wt::WPushButton>("Test Button");
+
+
     // auto theme_switcher = appRoot_->addNew<ThemeSwitcher>(session_);
     // theme_switcher->addStyleClass("fixed bottom-16 right-3");
-    // auto dark_mode_toggle = appRoot_->addNew<DarkModeToggle>(session_);
-    // dark_mode_toggle->addStyleClass("fixed bottom-3 right-3");
+    auto dark_mode_toggle = appRoot_->addNew<DarkModeToggle>(session_);
+    dark_mode_toggle->addStyleClass("fixed bottom-3 right-3");
 
     // auto navbar = appRoot_->addNew<Navigation>(session_);
     

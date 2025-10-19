@@ -1,9 +1,11 @@
 #include "Theme.h"
 
 #include <initializer_list>
+#include <sstream>
 
 #include <Wt/DomElement.h>
 #include <Wt/WApplication.h>
+#include <Wt/WCheckBox.h>
 #include <Wt/WDialog.h>
 #include <Wt/WLink.h>
 #include <Wt/WMenuItem.h>
@@ -12,6 +14,7 @@
 #include <Wt/WPopupWidget.h>
 #include <Wt/WProgressBar.h>
 #include <Wt/WPushButton.h>
+#include <Wt/WRadioButton.h>
 #include <Wt/WString.h>
 #include <Wt/WSuggestionPopup.h>
 #include <Wt/WTabWidget.h>
@@ -27,12 +30,55 @@ void addClasses(Wt::DomElement& element, std::initializer_list<const char*> clas
     }
 }
 
+std::string classesFromMessage(const char* messageId)
+{
+    if (!messageId) {
+        return {};
+    }
+
+    const std::string classes = Wt::WString::tr(messageId).toUTF8();
+    if (classes.size() >= 4 && classes[0] == '?' && classes[1] == '?') {
+        return {};
+    }
+
+    return classes;
+}
+
+void addClassesFromMessage(Wt::DomElement& element, const char* messageId)
+{
+    const std::string classes = classesFromMessage(messageId);
+    if (classes.empty()) {
+        return;
+    }
+
+    std::istringstream stream(classes);
+    std::string cls;
+    while (stream >> cls) {
+        element.addPropertyWord(Wt::Property::Class, cls);
+    }
+}
+
+void addClassesFromMessage(Wt::WWidget* widget, const char* messageId)
+{
+    if (!widget) {
+        return;
+    }
+
+    const std::string classes = classesFromMessage(messageId);
+    if (classes.empty()) {
+        return;
+    }
+
+    widget->addStyleClass(classes);
+}
+
 }
 
 Theme::Theme(const std::string& name)
     : WTheme()
     , name_(name.empty() ? "tailwind" : name)
 {
+    wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/000_General/General_components");
 }
 
 Theme::~Theme() = default;
@@ -72,7 +118,7 @@ void Theme::apply(Wt::WWidget* widget, Wt::WWidget* child, int widgetRole) const
         child->addStyleClass("w-4 h-4 text-gray-500 dark:text-gray-400");
         break;
     case Wt::MenuItemCheckBox:
-        child->addStyleClass("mr-2 text-blue-600 dark:text-blue-400");
+        addClassesFromMessage(child, "checkbox.default");
         break;
     case Wt::MenuItemClose:
         widget->addStyleClass("relative");
@@ -135,46 +181,10 @@ void Theme::apply(Wt::WWidget* widget, Wt::DomElement& element, int elementRole)
     switch (element.type()) {
     case Wt::DomElementType::BUTTON:
         if (creating) {
-            addClasses(element, {
-                "inline-flex",
-                "items-center",
-                "justify-center",
-                "gap-2",
-                "rounded-lg",
-                "px-4",
-                "py-2",
-                "text-sm",
-                "font-medium",
-                "transition-colors",
-                "focus:outline-none",
-                "focus:ring-2",
-                "focus:ring-offset-2"
-            });
+            addClassesFromMessage(element, "btn.default");
         }
 
-        if (auto* button = dynamic_cast<Wt::WPushButton*>(widget)) {
-            if (button->isDefault()) {
-                addClasses(element, {
-                    "bg-blue-600",
-                    "text-white",
-                    "hover:bg-blue-500",
-                    "focus:ring-blue-500",
-                    "dark:bg-blue-500",
-                    "dark:hover:bg-blue-400",
-                    "dark:focus:ring-blue-400"
-                });
-            } else {
-                addClasses(element, {
-                    "bg-gray-900",
-                    "text-white",
-                    "hover:bg-gray-800",
-                    "focus:ring-gray-900",
-                    "dark:bg-gray-700",
-                    "dark:hover:bg-gray-600",
-                    "dark:focus:ring-gray-600"
-                });
-            }
-        }
+        (void)widget;
         break;
 
     case Wt::DomElementType::DIV:
@@ -309,29 +319,24 @@ void Theme::apply(Wt::WWidget* widget, Wt::DomElement& element, int elementRole)
         break;
 
     case Wt::DomElementType::INPUT:
+        if (creating) {
+            if (dynamic_cast<Wt::WCheckBox*>(widget)) {
+                addClassesFromMessage(element, "checkbox.default");
+            } else if (!dynamic_cast<Wt::WRadioButton*>(widget)) {
+                addClassesFromMessage(element, "lineedit.default");
+            }
+        }
+        break;
+
     case Wt::DomElementType::TEXTAREA:
+        if (creating) {
+            addClassesFromMessage(element, "lineedit.default");
+        }
+        break;
+
     case Wt::DomElementType::SELECT:
         if (creating) {
-            addClasses(element, {
-                "block",
-                "w-full",
-                "rounded-lg",
-                "border",
-                "border-gray-300",
-                "dark:border-gray-700",
-                "bg-white",
-                "dark:bg-gray-900",
-                "px-3",
-                "py-2",
-                "text-sm",
-                "text-gray-900",
-                "dark:text-gray-100",
-                "focus:outline-none",
-                "focus:ring-2",
-                "focus:ring-blue-500",
-                "focus:border-blue-500",
-                "transition"
-            });
+            addClassesFromMessage(element, "combobox.default");
         }
         break;
 

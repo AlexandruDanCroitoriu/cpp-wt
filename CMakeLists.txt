@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13...3.22)
 include(FetchContent)
 include(ExternalProject)
 
-project(cpp-wt)
+project(app)
 
 # Set number of parallel build jobs to number of available processors
 include(ProcessorCount)
