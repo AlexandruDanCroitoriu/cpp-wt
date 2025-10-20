@@ -1,0 +1,23 @@
+[2025-10-20 13:50:54] [INFO] Starting build process...
+[2025-10-20 13:50:54] [INFO] Build type: debug
+[2025-10-20 13:50:54] [INFO] Clean build: false
+[2025-10-20 13:50:54] [INFO] Starting debug build process...
+[2025-10-20 13:50:54] [INFO] Build directory: /home/alex/github-repos/cpp-wt/build/debug
+[2025-10-20 13:50:54] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/build.log
+[2025-10-20 13:50:54] [INFO] Configuring CMake for debug build...
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alex/github-repos/cpp-wt/build/debug
+[2025-10-20 13:50:54] [SUCCESS] CMake configuration completed successfully
+[2025-10-20 13:50:54] [INFO] Building with 4 parallel jobs...
+Consolidate compiler generated dependencies of target app
+[  6%] Building CXX object CMakeFiles/app.dir/src/006_Stylus/Stylus.cpp.o
+[ 13%] Linking CXX executable app
+[100%] Built target app
+[2025-10-20 13:50:58] [SUCCESS] debug build completed successfully!
+[2025-10-20 13:50:58] [INFO] Executable location: /home/alex/github-repos/cpp-wt/build/debug/app
+[2025-10-20 13:50:58] [SUCCESS] Application binary created successfully
+[2025-10-20 13:50:58] [INFO] Binary size: 9.9M
+[2025-10-20 13:50:58] [SUCCESS] Build completed successfully!
+[2025-10-20 13:50:58] [INFO] You can now run the application using:
+[2025-10-20 13:50:58] [INFO]   ./scripts/app/run.sh --debug

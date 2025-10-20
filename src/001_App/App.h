@@ -4,7 +4,7 @@
 
 #include "002_Dbo/Session.h"
 
-// #include "101-Stylus/Stylus.h"
+#include "006_Stylus/Stylus.h"
 #include "003_Auth/AuthWidget.h"
 #include "004_Theme/Theme.h"
 
@@ -24,7 +24,7 @@ public:
 private:
     Wt::WDialog* authDialog_ = nullptr;
     Session session_;
-    // // Stylus::Stylus* stylus_ = nullptr;
+    Stylus::Stylus* stylus_ = nullptr;
     void authEvent();
     // Wt::WContainerWidget* app_content_;
     void createApp();

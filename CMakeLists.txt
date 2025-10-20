@@ -54,11 +54,14 @@ set(SOURCES
     ${SOURCE_DIR}/004_Theme/Theme.cpp
     ${SOURCE_DIR}/004_Theme/DarkModeToggle.cpp
     
-    # ${SOURCE_DIR}/003-Components/ComponentsDisplay.cpp
-    # ${SOURCE_DIR}/003-Components/Button.cpp
-    # ${SOURCE_DIR}/003-Components/MonacoEditor.cpp
-    # ${SOURCE_DIR}/003-Components/VoiceRecorder.cpp
-    # ${SOURCE_DIR}/003-Components/WhisperWrapper.cpp
+    # ${SOURCE_DIR}/005_Components/ComponentsDisplay.cpp
+    # ${SOURCE_DIR}/005_Components/Button.cpp
+    ${SOURCE_DIR}/005_Components/DragBar.cpp
+    ${SOURCE_DIR}/005_Components/MonacoEditor.cpp
+    # ${SOURCE_DIR}/005_Components/VoiceRecorder.cpp
+    # ${SOURCE_DIR}/005_Components/WhisperWrapper.cpp
+    
+    ${SOURCE_DIR}/006_Stylus/Stylus.cpp
     
     ${SOURCE_DIR}/002_Dbo/Session.cpp
     ${SOURCE_DIR}/002_Dbo/Tables/User.cpp

@@ -102,6 +102,29 @@ run_application() {
     fi
 }
 
+run_tailwind_watch() {
+    local tailwind_dir="$PROJECT_ROOT/static/0_stylus/tailwind"
+    
+    if [ ! -d "$tailwind_dir" ]; then
+        dialog --title "Tailwind Watch" --msgbox "Tailwind directory not found at $tailwind_dir" 8 70
+        return
+    fi
+    
+    if [ ! -f "$tailwind_dir/package.json" ]; then
+        dialog --title "Tailwind Watch" --msgbox "package.json not found in $tailwind_dir" 8 70
+        return
+    fi
+    
+    print_status "Starting Tailwind CSS watch mode"
+    
+    # Change to the tailwind directory and run npm watch
+    if (cd "$tailwind_dir" && npm run watch); then
+        dialog --title "Tailwind Watch" --msgbox "Tailwind CSS watch mode exited cleanly." 8 70
+    else
+        dialog --title "Tailwind Watch" --msgbox "Tailwind CSS watch mode terminated with an error." 8 70
+    fi
+}
+
 set_configuration() {
     load_current_config
 
@@ -157,9 +180,10 @@ show_menu() {
             --no-cancel \
             --backtitle "Wt App Management" \
             --title "App Control Panel" \
-            --menu "Available Operations:" 18 80 7 \
-            build "$build_desc" \
+            --menu "Available Operations:" 20 80 8 \
             run "$run_desc" \
+            build "$build_desc" \
+            tailwind "Start Tailwind CSS watch mode" \
             configure "Set build configuration" \
             back "Back" \
             3>&1 1>&2 2>&3)
@@ -183,6 +207,9 @@ show_menu() {
                 ;;
             run)
                 run_application
+                ;;
+            tailwind)
+                run_tailwind_watch
                 ;;
             configure)
                 set_configuration

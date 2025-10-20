@@ -1,73 +1,95 @@
-[2025-10-19 23:57:57] [INFO] Starting run...
-[2025-10-19 23:57:57] [INFO] Project root: /home/alex/github-repos/cpp-wt
-[2025-10-19 23:57:57] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/run.log
-[2025-10-19 23:57:57] [INFO] Selected build type: debug
-[2025-10-19 23:57:57] [INFO] Document root: /home/alex/github-repos/cpp-wt/static;/home/alex/github-repos/cpp-wt/resources
-[2025-10-19 23:57:57] [INFO] HTTP address: 127.0.0.1
-[2025-10-19 23:57:57] [INFO] HTTP port: 8080
-[2025-10-19 23:57:57] [INFO] Deploy path: /
-[2025-10-19 23:57:57] [INFO] Wt arguments: --docroot /home/alex/github-repos/cpp-wt/static\;/home/alex/github-repos/cpp-wt/resources --http-address 127.0.0.1 --http-port 8080 --deploy-path /
-[2025-10-19 23:57:57] [INFO] Launching debug build from /home/alex/github-repos/cpp-wt/build/debug
-[2025-10-19 23:57:57] [INFO] Executable: /home/alex/github-repos/cpp-wt/build/debug/app
+[2025-10-20 14:49:28] [INFO] Starting run...
+[2025-10-20 14:49:28] [INFO] Project root: /home/alex/github-repos/cpp-wt
+[2025-10-20 14:49:28] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/run.log
+[2025-10-20 14:49:28] [INFO] Selected build type: debug
+[2025-10-20 14:49:28] [INFO] Launching debug build using make run
+[  6%] Building CXX object CMakeFiles/app.dir/src/main.cpp.o
+[ 13%] Building CXX object CMakeFiles/app.dir/src/000_Server/Server.cpp.o
+[ 20%] Building CXX object CMakeFiles/app.dir/src/001_App/App.cpp.o
+[ 26%] Building CXX object CMakeFiles/app.dir/src/006_Stylus/Stylus.cpp.o
+[ 33%] Linking CXX executable app
+[100%] Built target app
 Starting Wt server...
-[2025-Oct-19 23:57:57.957] 402456 - [info] "config: reading Wt config file: /etc/wt/wt_config.xml (location = './debug/app')"
-[2025-Oct-19 23:57:57.974] 402456 - [info] "WServer/wthttp: initializing built-in wthttpd"
-[2025-Oct-19 23:57:57.998] 402456 - [info] "wthttp: started server: http://127.0.0.1:8080"
-[2025-Oct-19 23:58:02.175] 402456 - [info] "Wt: session created (#sessions = 1)"
-[2025-Oct-19 23:58:02.175] 402456 [/ SXDGmCUSr7B68sWW] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
-[2025-Oct-19 23:58:02.181] 402456 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2108"
-[2025-Oct-19 23:58:02.181] 402456 - [info] "WebRequest: took 9.903 ms"
-[2025-Oct-19 23:58:02.203] 402456 - [info] "Wt: session created (#sessions = 2)"
-[2025-Oct-19 23:58:02.203] 402456 [/ Rdlh6ZJqVwdgnR8q] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
-[2025-Oct-19 23:58:02.203] 402456 [/ Rdlh6ZJqVwdgnR8q] [info] "Wt: signal from dead session, sending reload."
-[2025-Oct-19 23:58:02.203] 402456 - [info] "WebController: Removing session Rdlh6ZJqVwdgnR8q"
-[2025-Oct-19 23:58:02.203] 402456 [/ Rdlh6ZJqVwdgnR8q] [info] "Wt: session destroyed (#sessions = 1)"
-[2025-Oct-19 23:58:02.204] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=BDJ7p8H9NXFuHoHr HTTP/1.1 200 76"
-[2025-Oct-19 23:58:02.204] 402456 - [info] "WebRequest: took 9.308 ms"
-[2025-Oct-19 23:58:02.395] 402456 [/ SXDGmCUSr7B68sWW] [info] "Using SQLite database in debug mode"
+[2025-Oct-20 14:49:41.219] 156750 - [info] "config: reading Wt config file: ../../wt_config.xml (location = './app')"
+[2025-Oct-20 14:49:41.220] 156750 - [info] "WServer/wthttp: initializing built-in wthttpd"
+[2025-Oct-20 14:49:41.223] 156750 - [info] "wthttp: started server: http://0.0.0.0:9020"
+[2025-Oct-20 14:49:50.504] 156750 - [info] "Wt: session created (#sessions = 1)"
+[2025-Oct-20 14:49:50.505] 156750 [/ X8zWqASWdwNCyg4V] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-20 14:49:50.505] 156750 [/ X8zWqASWdwNCyg4V] [info] "Wt: signal from dead session, sending reload."
+[2025-Oct-20 14:49:50.505] 156750 - [info] "WebController: Removing session X8zWqASWdwNCyg4V"
+[2025-Oct-20 14:49:50.505] 156750 [/ X8zWqASWdwNCyg4V] [info] "Wt: session destroyed (#sessions = 0)"
+[2025-Oct-20 14:49:50.506] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=gUfbANKleZjGLUWK HTTP/1.1 200 76"
+[2025-Oct-20 14:49:50.506] 156750 - [info] "WebRequest: took 1.471 ms"
+[2025-Oct-20 14:49:50.519] 156750 - [info] "Wt: session created (#sessions = 1)"
+[2025-Oct-20 14:49:50.519] 156750 [/ zzqfhv36a6XUEjOU] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+[2025-Oct-20 14:49:50.520] 156750 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2179"
+[2025-Oct-20 14:49:50.520] 156750 - [info] "WebRequest: took 1.19 ms"
+[2025-Oct-20 14:49:50.768] 156750 [/ zzqfhv36a6XUEjOU] [info] "Using SQLite database in debug mode"
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: rollback transaction
-[2025-Oct-19 23:58:02.457] 402456 [/ SXDGmCUSr7B68sWW] [info] "Using existing database"
+[2025-Oct-20 14:49:50.787] 156750 [/ zzqfhv36a6XUEjOU] [info] "Using existing database"
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: select "id", "version", "name" from "permission"  where (name = ?)
 Dbo.backend.Sqlite3: commit transaction
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where (provider = ? AND identity = ?)
-[2025-Oct-19 23:58:02.459] 402456 [/ SXDGmCUSr7B68sWW] [info] "Admin user 'maxuli' already exists, skipping creation."
+[2025-Oct-20 14:49:50.787] 156750 [/ zzqfhv36a6XUEjOU] [info] "Admin user 'maxuli' already exists, skipping creation."
 Dbo.backend.Sqlite3: commit transaction
-[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/000_General/General_components.xml"
-[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-registration-view.xml"
-[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-auth-strings.xml"
-[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-auth-login.xml"
-[2025-Oct-19 23:58:02.460] 402456 [/ SXDGmCUSr7B68sWW] [error] "WMessageResources: Could not load resource bundle: /home/alex/github-repos/cpp-wt/static/static/0_stylus/xml/001_Auth/ovrwt-auth.xml"
-[2025-Oct-19 23:58:02.464] 402456 - [access] "wthttp: 127.0.0.1   GET /?wtd=SXDGmCUSr7B68sWW&request=style&page=1 HTTP/1.1 200 120"
-[2025-Oct-19 23:58:02.464] 402456 - [info] "WebRequest: took 207.002 ms"
-[2025-Oct-19 23:58:02.469] 402456 - [access] "wthttp: 127.0.0.1   GET /?wtd=SXDGmCUSr7B68sWW&sid=3127770082&webGL=true&scrW=1920&scrH=1080&tz=180&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=1554764229 HTTP/1.1 200 18200"
-[2025-Oct-19 23:58:02.469] 402456 - [info] "WebRequest: took 98.553 ms"
-[2025-Oct-19 23:58:02.491] 402456 - [info] "Wt: session created (#sessions = 2)"
-[2025-Oct-19 23:58:02.491] 402456 [/ 9TGimQa64yYXoXSY] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
-[2025-Oct-19 23:58:02.491] 402456 - [info] "Wt: session created (#sessions = 3)"
-[2025-Oct-19 23:58:02.492] 402456 [/ ZatXX1d0i8nhMLhU] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
-[2025-Oct-19 23:58:02.492] 402456 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=D194BuWEV0ftF12o HTTP/1.1 200 2151"
-[2025-Oct-19 23:58:02.492] 402456 - [info] "WebRequest: took 0.894 ms"
-[2025-Oct-19 23:58:02.492] 402456 - [access] "wthttp: 127.0.0.1   GET /resources/webkit-transitions.css HTTP/1.1 200 2131"
-[2025-Oct-19 23:58:02.492] 402456 - [info] "WebRequest: took 0.775 ms"
-[2025-Oct-19 23:58:02.493] 402456 - [info] "Wt: session created (#sessions = 4)"
-[2025-Oct-19 23:58:02.493] 402456 [/ IBqRaMvUW11Lj83W] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
-[2025-Oct-19 23:58:02.493] 402456 - [access] "wthttp: 127.0.0.1   GET /resources/form.css HTTP/1.1 200 2128"
-[2025-Oct-19 23:58:02.493] 402456 - [info] "WebRequest: took 0.846 ms"
-[2025-Oct-19 23:58:03.209] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 1995"
-[2025-Oct-19 23:58:03.209] 402456 - [info] "WebRequest: took 0.518 ms"
-[2025-Oct-19 23:58:04.861] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 48"
-[2025-Oct-19 23:58:04.861] 402456 - [info] "WebRequest: took 0.509 ms"
-[2025-Oct-19 23:58:13.005] 402456 [/ 9TGimQa64yYXoXSY] [info] "WebController: timeout: expiring"
-[2025-Oct-19 23:58:13.005] 402456 [/ IBqRaMvUW11Lj83W] [info] "WebController: timeout: expiring"
-[2025-Oct-19 23:58:13.005] 402456 [/ ZatXX1d0i8nhMLhU] [info] "WebController: timeout: expiring"
-[2025-Oct-19 23:58:13.005] 402456 [/ 9TGimQa64yYXoXSY] [info] "Wt: session destroyed (#sessions = 1)"
-[2025-Oct-19 23:58:13.005] 402456 [/ IBqRaMvUW11Lj83W] [info] "Wt: session destroyed (#sessions = 1)"
-[2025-Oct-19 23:58:13.005] 402456 [/ ZatXX1d0i8nhMLhU] [info] "Wt: session destroyed (#sessions = 1)"
-[2025-Oct-19 23:58:43.859] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 48"
-[2025-Oct-19 23:58:43.859] 402456 - [info] "WebRequest: took 1.153 ms"
-[2025-Oct-19 23:58:45.836] 402456 - [access] "wthttp: 127.0.0.1   POST /?wtd=SXDGmCUSr7B68sWW HTTP/1.1 200 48"
-[2025-Oct-19 23:58:45.836] 402456 - [info] "WebRequest: took 0.59 ms"
-[2025-10-19 23:58:48] [ERROR] Application exited with code 141
+[2025-Oct-20 14:49:50.787] 156750 [/ zzqfhv36a6XUEjOU] [warning] "WApplication: Deploy-path ends with '/', using /?_= for internal paths"
+[2025-Oct-20 14:49:50.790] 156750 - [access] "wthttp: 127.0.0.1   GET /?wtd=zzqfhv36a6XUEjOU&request=style&page=1 HTTP/1.1 200 120"
+[2025-Oct-20 14:49:50.790] 156750 - [info] "WebRequest: took 215.733 ms"
+[2025-Oct-20 14:49:50.802] 156750 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=7e45BBS9ez2YtB65 HTTP/1.1 200 26117"
+[2025-Oct-20 14:49:50.803] 156750 - [access] "wthttp: 127.0.0.1   GET /?wtd=zzqfhv36a6XUEjOU&sid=1694118363&webGL=true&scrW=1920&scrH=1080&tz=180&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=4186145960 HTTP/1.1 200 18186"
+[2025-Oct-20 14:49:50.803] 156750 - [info] "WebRequest: took 36.028 ms"
+[2025-Oct-20 14:49:51.004] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 6742"
+[2025-Oct-20 14:49:51.004] 156750 - [info] "WebRequest: took 0.964 ms"
+[2025-Oct-20 14:49:53.051] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:53.051] 156750 - [info] "WebRequest: took 0.454 ms"
+[2025-Oct-20 14:49:53.285] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:53.285] 156750 - [info] "WebRequest: took 0.374 ms"
+[2025-Oct-20 14:49:53.411] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 286"
+[2025-Oct-20 14:49:53.411] 156750 - [info] "WebRequest: took 0.431 ms"
+[2025-Oct-20 14:49:54.385] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:54.385] 156750 - [info] "WebRequest: took 0.85 ms"
+[2025-Oct-20 14:49:54.574] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 396"
+[2025-Oct-20 14:49:54.574] 156750 - [info] "WebRequest: took 1.151 ms"
+[2025-Oct-20 14:49:55.289] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:55.289] 156750 - [info] "WebRequest: took 0.302 ms"
+[2025-Oct-20 14:49:55.445] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 305"
+[2025-Oct-20 14:49:55.445] 156750 - [info] "WebRequest: took 0.569 ms"
+[2025-Oct-20 14:49:56.285] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:56.285] 156750 - [info] "WebRequest: took 0.593 ms"
+[2025-Oct-20 14:49:56.733] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 218"
+[2025-Oct-20 14:49:56.733] 156750 - [info] "WebRequest: took 0.417 ms"
+[2025-Oct-20 14:49:57.170] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 460"
+[2025-Oct-20 14:49:57.170] 156750 - [info] "WebRequest: took 0.805 ms"
+[2025-Oct-20 14:49:57.683] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:57.683] 156750 - [info] "WebRequest: took 0.575 ms"
+[2025-Oct-20 14:49:58.129] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 199"
+[2025-Oct-20 14:49:58.129] 156750 - [info] "WebRequest: took 1.137 ms"
+[2025-Oct-20 14:49:58.821] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 306"
+[2025-Oct-20 14:49:58.821] 156750 - [info] "WebRequest: took 0.599 ms"
+[2025-Oct-20 14:49:59.351] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:49:59.351] 156750 - [info] "WebRequest: took 0.877 ms"
+[2025-Oct-20 14:49:59.698] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 218"
+[2025-Oct-20 14:49:59.698] 156750 - [info] "WebRequest: took 1.182 ms"
+[2025-Oct-20 14:50:00.368] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:50:00.368] 156750 - [info] "WebRequest: took 0.586 ms"
+[2025-Oct-20 14:50:00.518] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 459"
+[2025-Oct-20 14:50:00.518] 156750 - [info] "WebRequest: took 0.579 ms"
+[2025-Oct-20 14:50:00.939] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 219"
+[2025-Oct-20 14:50:00.939] 156750 - [info] "WebRequest: took 0.822 ms"
+[2025-Oct-20 14:50:01.343] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:50:01.343] 156750 - [info] "WebRequest: took 1.136 ms"
+[2025-Oct-20 14:50:01.485] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 285"
+[2025-Oct-20 14:50:01.485] 156750 - [info] "WebRequest: took 0.423 ms"
+[2025-Oct-20 14:50:01.766] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 217"
+[2025-Oct-20 14:50:01.766] 156750 - [info] "WebRequest: took 0.933 ms"
+[2025-Oct-20 14:50:02.312] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:50:02.312] 156750 - [info] "WebRequest: took 0.441 ms"
+[2025-Oct-20 14:50:02.469] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 287"
+[2025-Oct-20 14:50:02.469] 156750 - [info] "WebRequest: took 0.899 ms"
+[2025-Oct-20 14:50:02.768] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 218"
+[2025-Oct-20 14:50:02.768] 156750 - [info] "WebRequest: took 0.8 ms"
+[2025-Oct-20 14:50:11.307] 156750 - [access] "wthttp: 127.0.0.1   POST /?wtd=zzqfhv36a6XUEjOU HTTP/1.1 200 48"
+[2025-Oct-20 14:50:11.307] 156750 - [info] "WebRequest: took 0.318 ms"

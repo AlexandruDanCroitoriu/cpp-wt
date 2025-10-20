@@ -4,7 +4,7 @@
 #include "004_Theme/DarkModeToggle.h"
 // #include "004_Theme/ThemeSwitcher.h"
 
-// #include "003-Components/ComponentsDisplay.h"
+// #include "005_Components/ComponentsDisplay.h"
 // #include "008-AboutMe/AboutMe.h"
 // #include "101-StarWarsApi/StarWarsApi.h"
 
@@ -45,14 +45,17 @@ App::App(const Wt::WEnvironment& env)
         // Load XML bundles that override the default Wt authentication templates.
         auto& bundle = wApp->messageResourceBundle();
         
-        bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth");
-        bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-login");
-        bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-strings");
-        bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-registration-view");
+        // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth");
+        // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-login");
+        // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-strings");
+        // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-registration-view");
     }
     setTheme(std::make_shared<Theme>());
 
     authDialog_ = wApp->root()->addNew<Wt::WDialog>("");
+    authDialog_->keyWentDown().connect([=](Wt::WKeyEvent e) {
+        wApp->globalKeyWentDown().emit(e); // Emit the global key event
+    });
     authDialog_->setTitleBarEnabled(false);
     authDialog_->setClosable(false);
     authDialog_->setModal(true);
@@ -70,6 +73,7 @@ App::App(const Wt::WEnvironment& env)
     authWidget_ = authDialog_->contents()->addWidget(std::make_unique<AuthWidget>(session_));
     // authWidget_->addStyleClass("w-full max-w-md bg-white text-gray-900 border border-gray-200 rounded-xl shadow-lg p-6 space-y-4 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700 transition-colors");
     appRoot_ = root()->addNew<Wt::WContainerWidget>();
+    stylus_ = root()->addChild(std::make_unique<Stylus::Stylus>(session_));
     
     session_.login().changed().connect(this, &App::authEvent);
     authWidget_->processEnvironment();
@@ -144,13 +148,13 @@ void App::createApp()
         transaction.commit();
     }
 
-    auto button = root()->addNew<Wt::WPushButton>("Test Button");
+    auto button = appRoot_->addNew<Wt::WPushButton>("Test Button");
 
 
     // auto theme_switcher = appRoot_->addNew<ThemeSwitcher>(session_);
     // theme_switcher->addStyleClass("fixed bottom-16 right-3");
     auto dark_mode_toggle = appRoot_->addNew<DarkModeToggle>(session_);
-    dark_mode_toggle->addStyleClass("fixed bottom-3 right-3");
+    // dark_mode_toggle->addStyleClass("fixed bottom-3 right-3");
 
     // auto navbar = appRoot_->addNew<Navigation>(session_);
     

@@ -95,12 +95,7 @@ fi
 print_status "Project root: $PROJECT_ROOT"
 print_status "Log file: $LOG_FILE"
 
-APP_BINARY_NAME="app"
 BUILD_TYPE="debug"
-DOCROOT="$PROJECT_ROOT/static;$PROJECT_ROOT/resources"
-HTTP_ADDRESS="127.0.0.1"
-HTTP_PORT="8080"
-DEPLOY_PATH="/"
 
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -127,43 +122,27 @@ if [ ! -f "$BUILD_SCRIPT" ]; then
 fi
 
 BUILD_DIR="$PROJECT_ROOT/build/$BUILD_TYPE"
-BINARY_PATH="$BUILD_DIR/$APP_BINARY_NAME"
-WORK_DIR="$PROJECT_ROOT/build"
 
 print_status "Selected build type: $BUILD_TYPE"
-print_status "Document root: $DOCROOT"
-print_status "HTTP address: $HTTP_ADDRESS"
-print_status "HTTP port: $HTTP_PORT"
-print_status "Deploy path: $DEPLOY_PATH"
 
-if [ ! -x "$BINARY_PATH" ]; then
-    print_error "Application binary not found at $BINARY_PATH"
+if [ ! -d "$BUILD_DIR" ]; then
+    print_error "Build directory not found: $BUILD_DIR"
     print_status "Run ./scripts/app/build.sh --$BUILD_TYPE to build the application"
     exit 1
 fi
 
-if [ ! -d "$WORK_DIR" ]; then
-    print_error "Build directory not found: $WORK_DIR"
-    exit 1
-fi
 
-WT_ARGS=("--docroot" "$DOCROOT" "--http-address" "$HTTP_ADDRESS" "--http-port" "$HTTP_PORT" "--deploy-path" "$DEPLOY_PATH")
 
-printf -v wt_args_string "%q " "${WT_ARGS[@]}"
-print_status "Wt arguments: ${wt_args_string% }"
+print_status "Launching $BUILD_TYPE build using make run"
 
-print_status "Launching $BUILD_TYPE build from $WORK_DIR/$BUILD_TYPE"
-print_status "Executable: $BINARY_PATH"
-
-if ! pushd "$WORK_DIR" >/dev/null; then
-    print_error "Failed to change directory to $WORK_DIR"
+if ! pushd "$BUILD_DIR" >/dev/null; then
+    print_error "Failed to change directory to $BUILD_DIR"
     exit 1
 fi
 
 set +e
-CMD=("./$BUILD_TYPE/$APP_BINARY_NAME" "${WT_ARGS[@]}")
-# Run application while duplicating output into the log file.
-"${CMD[@]}" 2>&1 | tee -a "$LOG_FILE"
+# Run application using make run while duplicating output into the log file.
+make run 2>&1 | tee -a "$LOG_FILE"
 APP_EXIT_CODE=${PIPESTATUS[0]}
 set -e
 

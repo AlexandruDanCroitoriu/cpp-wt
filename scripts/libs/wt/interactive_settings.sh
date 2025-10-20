@@ -50,7 +50,7 @@ Description:
   Interactive configuration management for Wt library settings
 
 Options:
-  -h, --help    Show this help message
+  -h, --help    Show this help messaged
 
 Examples:
   $SCRIPT_NAME    # Open the interactive settings menu
