@@ -8,7 +8,8 @@ namespace Stylus {
 
 Stylus::Stylus(Session& session)
     : Wt::WDialog(),
-      session_(session)
+      session_(session),
+      stylus_state_()
 {
     initializeDialog();
     setupKeyboardShortcuts();

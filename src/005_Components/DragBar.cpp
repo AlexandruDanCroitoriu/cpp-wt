@@ -3,11 +3,11 @@
 #include <memory>
 #include <sstream>
 
-DragBar::DragBar(Wt::WWidget* target_widget, int initial_width, int min_width, int max_width)
-    : target_widget_(target_widget), 
-      current_width_(initial_width),
-      min_width_(min_width),
-      max_width_(max_width),
+DragBar::DragBar(Wt::WWidget* targetWidget, int initialWidth, int minWidth, int maxWidth)
+    : target_widget_(targetWidget), 
+      current_width_(initialWidth),
+      min_width_(minWidth),
+      max_width_(maxWidth),
       js_width_changed_(this, "widthChanged")
 {
     // Connect the JavaScript signal to the onWidthChanged method
@@ -17,9 +17,9 @@ DragBar::DragBar(Wt::WWidget* target_widget, int initial_width, int min_width, i
     setupJavaScriptHandlers();
 }
 
-void DragBar::onWidthChanged(int new_width) {
-    current_width_ = new_width;
-    width_changed_.emit(new_width);
+void DragBar::onWidthChanged(int newWidth) {
+    current_width_ = newWidth;
+    width_changed_.emit(newWidth);
 }
 
 void DragBar::initializeDragBar() {

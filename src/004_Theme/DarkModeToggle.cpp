@@ -24,7 +24,17 @@ DarkModeToggle::DarkModeToggle(Session& session)
             transaction.commit();
             Wt::log("info") << "Dark mode preference persisted for the current user.";
         }
-        wApp->setHtmlClass(isChecked() ? "dark" : "");
+        auto hasDarkClass = wApp->htmlClass().find("dark") != std::string::npos;
+        if (isChecked() && !hasDarkClass) {
+            wApp->setHtmlClass(wApp->htmlClass() + " dark");
+        } else if (!isChecked() && hasDarkClass) {
+            auto classes = wApp->htmlClass();
+            auto pos = classes.find(" dark");
+            if (pos != std::string::npos) {
+                classes.erase(pos, 5);
+                wApp->setHtmlClass(classes);
+            }
+        }
     });
 
     keyWentDown().connect([this](const Wt::WKeyEvent& event) {

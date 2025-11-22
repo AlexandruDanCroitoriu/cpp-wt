@@ -22,9 +22,9 @@ public:
     
     /**
      * @brief Sets the read-only state of the editor
-     * @param read_only True to make editor read-only, false to allow editing
+     * @param readOnly True to make editor read-only, false to allow editing
      */
-    void setReadOnly(bool read_only);
+    void setReadOnly(bool readOnly);
     
     /**
      * @brief Checks if there are unsaved changes in the editor
@@ -45,9 +45,9 @@ public:
     
     /**
      * @brief Loads content from a file into the editor
-     * @param resource_path Path to the file to load
+     * @param resourcePath Path to the file to load
      */
-    void setEditorText(std::string resource_path);
+    void setEditorText(std::string resourcePath);
     
     /**
      * @brief Saves the current editor content to the selected file
@@ -77,10 +77,10 @@ public:
     
     /**
      * @brief Reads text content from a file
-     * @param file_path Path to the file to read
+     * @param filePath Path to the file to read
      * @return File content as string
      */
-    static std::string getFileText(std::string file_path);
+    static std::string getFileText(std::string filePath);
 
     /**
      * @brief Signal emitted when save operation is requested

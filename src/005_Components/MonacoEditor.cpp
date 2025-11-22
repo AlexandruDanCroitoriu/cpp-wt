@@ -113,8 +113,8 @@ void MonacoEditor::textSaved()
     available_save_.emit();
 }
 
-void MonacoEditor::setReadOnly(bool read_only) { 
-    doJavaScript("setTimeout(function() { if(window." + editor_js_var_name_ + ") window." + editor_js_var_name_ + ".updateOptions({ readOnly: " + std::to_string(read_only) + " }); }, 200);");
+void MonacoEditor::setReadOnly(bool readOnly) { 
+    doJavaScript("setTimeout(function() { if(window." + editor_js_var_name_ + ") window." + editor_js_var_name_ + ".updateOptions({ readOnly: " + std::to_string(readOnly) + " }); }, 200);");
 }
 
 bool MonacoEditor::unsavedChanges()
@@ -126,18 +126,18 @@ bool MonacoEditor::unsavedChanges()
     return true;
 }
 
-void MonacoEditor::setEditorText(std::string resource_path)
+void MonacoEditor::setEditorText(std::string resourcePath)
 {
     resetLayout();
-    auto resource_path_url = resource_path + "?v=" + Wt::WRandom::generateId();
+    auto resourcePathUrl = resourcePath + "?v=" + Wt::WRandom::generateId();
     doJavaScript(
         R"(
             setTimeout(function() {
                 if(!window.)" + editor_js_var_name_ + R"() {
                     setTimeout(function() {
-                        console.log("Setting editor text to: )" + resource_path_url + R"(");
+                        console.log("Setting editor text to: )" + resourcePathUrl + R"(");
                         if (window.)" + editor_js_var_name_ + R"() {
-                            fetch(')" + resource_path_url + R"(')
+                            fetch(')" + resourcePathUrl + R"(')
                             .then(response => response.text())
                             .then(css => {
                                 window.)" + editor_js_var_name_ + R"(_current_text = css;
@@ -149,8 +149,8 @@ void MonacoEditor::setEditorText(std::string resource_path)
                     }, 2000);
                     return;
                 }
-                console.log("Setting editor text to: )" + resource_path_url + R"(");
-                fetch(')" + resource_path_url + R"(')
+                console.log("Setting editor text to: )" + resourcePathUrl + R"(");
+                fetch(')" + resourcePathUrl + R"(')
                     .then(response => response.text())
                     .then(css => {
                         window.)" + editor_js_var_name_ + R"(_current_text = css;
@@ -158,9 +158,9 @@ void MonacoEditor::setEditorText(std::string resource_path)
                     });
             }, 10); // Delay to ensure the editor is ready
         )");
-    current_text_ = getFileText(resource_path);
+    current_text_ = getFileText(resourcePath);
     unsaved_text_ = current_text_;
-    selected_file_path_ = resource_path;
+    selected_file_path_ = resourcePath;
     resetLayout();
 }
 
@@ -184,12 +184,12 @@ void MonacoEditor::setDarkTheme(bool dark)
 }
 
 
-std::string MonacoEditor::getFileText(std::string file_path)
+std::string MonacoEditor::getFileText(std::string filePath)
 {
-    std::ifstream file(file_path);
+    std::ifstream file(filePath);
     if (!file.is_open())
     {
-        Wt::log("error") << "Failed to read file: " << file_path;
+        Wt::log("error") << "Failed to read file: " << filePath;
         return "!Failed to read file!";
     }
 

@@ -2,7 +2,7 @@
   <application-settings location="*">
       <session-management>
           <shared-process>
-              <num-processes>1</num-processes>
+              <num-processes>50</num-processes>
           </shared-process>
           <tracking>URL</tracking>
           <reload-is-new-session>true</reload-is-new-session>
@@ -16,7 +16,7 @@
       <connector-isapi>
           <max-memory-request-size>128</max-memory-request-size>
       </connector-isapi>
-      <debug>false</debug>
+      <debug>true</debug>
       <log-file></log-file>
       <log-config>* -debug</log-config>
       <max-request-size>1024</max-request-size>

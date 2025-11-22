@@ -15,15 +15,15 @@ class DragBar : public Wt::WContainerWidget {
 public:
     /**
      * @brief Constructor - creates a drag bar for resizing the target widget
-     * @param target_widget The widget whose width will be controlled by dragging
-     * @param initial_width Initial width of the target widget in pixels
-     * @param min_width Minimum allowed width in pixels (default: 200)
-     * @param max_width Maximum allowed width in pixels (default: 800)
+     * @param targetWidget The widget whose width will be controlled by dragging
+     * @param initialWidth Initial width of the target widget in pixels
+     * @param minWidth Minimum allowed width in pixels (default: 200)
+     * @param maxWidth Maximum allowed width in pixels (default: 800)
      */
-    DragBar(Wt::WWidget* target_widget, 
-            int initial_width = 500, 
-            int min_width = 200, 
-            int max_width = 800);
+    DragBar(Wt::WWidget* targetWidget, 
+            int initialWidth = 500, 
+            int minWidth = 200, 
+            int maxWidth = 800);
 
     /**
      * @brief Signal emitted when drag operation ends with the new width
@@ -44,9 +44,9 @@ private:
 
     /**
      * @brief Callback function for when drag ends with new width
-     * @param new_width The new width in pixels
+     * @param newWidth The new width in pixels
      */
-    void onWidthChanged(int new_width);
+    void onWidthChanged(int newWidth);
 
     Wt::WWidget* target_widget_;           ///< Widget to resize
     int current_width_;                    ///< Current width of target widget

@@ -2,10 +2,17 @@
     "configurations": [
         {
             "name": "Debug",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/build/debug/_deps/tinyxml2-src/**",
+                "${workspaceFolder}/build/release/_deps/tinyxml2-src/**",
+                "/usr/include",
+                "/usr/local/include"                
+            ],
             "compilerPath": "/usr/bin/gcc",
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.cmake-tools",
         }
     ],
     "version": 4

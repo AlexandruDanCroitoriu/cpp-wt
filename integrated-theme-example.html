@@ -1,0 +1,86 @@
+
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-white">
+  <body class="h-full">
+  ```
+-->
+<el-dialog>
+  <dialog id="sidebar" class="m-0 p-0 backdrop:bg-transparent lg:hidden">
+    <el-dialog-backdrop class="fixed inset-0 bg-surface-alt transition-opacity duration-300 ease-linear data-[closed]:opacity-0"></el-dialog-backdrop>
+    <div tabindex="0" class="fixed inset-0 flex focus:outline focus:outline-0">
+      <el-dialog-panel class="group/dialog-panel relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-[closed]:-translate-x-full">
+        <div class="absolute left-full top-0 flex w-16 justify-center pt-5 duration-300 ease-in-out group-data-[closed]/dialog-panel:opacity-0">
+          <button type="button" command="close" commandfor="sidebar" class="-m-2.5 p-2.5">
+            <span class="sr-only">Close sidebar</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-on-surface-strong">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        <div class="relative flex grow flex-col gap-y-5 overflow-y-auto bg-surface px-6 pb-4 dark:ring dark:ring-outline dark:before:pointer-events-none dark:before:absolute dark:before:inset-0 dark:before:bg-surface-alt">
+          <nav class="relative flex flex-1 flex-col">
+                <!-- ul with li elements, leave empty for now -->
+          </nav>
+        </div>
+      </el-dialog-panel>
+    </div>
+  </dialog>
+</el-dialog>
+
+<!-- Static sidebar for desktop -->
+<div class="hidden bg-surface lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+  <!-- Sidebar component, swap this element with another sidebar if you like -->
+  <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-outline bg-surface px-6 pb-4">
+    <nav class="flex flex-1 flex-col">
+        <!-- ul with li elements, leave empty for now -->
+    </nav>
+  </div>
+</div>
+
+<div class="lg:pl-72">
+  <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-outline bg-surface px-4 shadow-sm dark:shadow-none sm:gap-x-6 sm:px-6 lg:px-8">
+    <button type="button" command="show-modal" commandfor="sidebar" class="-m-2.5 p-2.5 text-on-surface hover:text-on-surface-strong lg:hidden">
+      <span class="sr-only">Open sidebar</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <!-- Separator -->
+    <div aria-hidden="true" class="h-6 w-px bg-outline lg:hidden"></div>
+
+    <div class="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
+      <form action="#" method="GET" class="grid flex-1 grid-cols-1">
+        <input name="search" placeholder="Search" aria-label="Search" class="col-start-1 row-start-1 block size-full bg-surface pl-8 text-base text-on-surface-strong outline-none placeholder:text-on-surface sm:text-sm/6" />
+        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 size-5 self-center text-on-surface">
+          <path d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" fill-rule="evenodd" />
+        </svg>
+      </form>
+      <div class="flex items-center gap-x-4 lg:gap-x-6">
+        <button type="button" class="-m-2.5 p-2.5 text-on-surface hover:text-on-surface-strong">
+          <span class="sr-only">View notifications</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- Separator -->
+        <div aria-hidden="true" class="hidden lg:block lg:h-6 lg:w-px lg:bg-outline"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="py-10">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <!-- Your content -->
+    </div>
+  </main>
+</div>

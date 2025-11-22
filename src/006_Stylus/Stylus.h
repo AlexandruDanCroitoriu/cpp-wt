@@ -6,6 +6,7 @@
 #include <Wt/WContainerWidget.h>
 #include <Wt/WStackedWidget.h>
 #include "002_Dbo/Session.h"
+#include "007_State/StylusState.h"
 
 namespace Stylus {
 
@@ -39,6 +40,8 @@ private:
     Wt::WMenuItem* tailwind_menu_item_;
     Wt::WMenuItem* images_menu_item_;
     Wt::WMenuItem* settings_menu_item_;
+
+    StylusState* stylus_state_;
 };
 
 }

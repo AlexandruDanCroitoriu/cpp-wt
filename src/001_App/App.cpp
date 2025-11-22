@@ -3,6 +3,7 @@
 
 #include "004_Theme/DarkModeToggle.h"
 // #include "004_Theme/ThemeSwitcher.h"
+#include "008_ApplicationShell/SidebarLayout.h"
 
 // #include "005_Components/ComponentsDisplay.h"
 // #include "008-AboutMe/AboutMe.h"
@@ -29,14 +30,13 @@ App::App(const Wt::WEnvironment& env)
 #endif
     // Title
     setTitle("Wt CPP app title");
-    setHtmlClass("dark");
     // setCssTheme("polished");
     // #ifdef DEBUG
     // useStyleSheet(docRoot() + "/static/css/tailwind.css?v=" + Wt::WRandom::generateId()); // Cache busting
     // #elif RELEASE
     // useStyleSheet(docRoot() + "/static/css/tailwind.minify.css");
     // #endif
-    setBodyClass("min-h-screen min-w-screen bg-gray-50 text-gray-900 font-sans antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors");
+    // setBodyClass("min-h-screen min-w-screen bg-gray-50 text-gray-900 font-sans antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors");
     // require("https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4");
     // require("https://unpkg.com/vue@3/dist/vue.global.prod.js");
     // require("https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js");
@@ -147,6 +147,8 @@ void App::createApp()
         }
         transaction.commit();
     }
+
+    auto sidebarLayout = appRoot_->addNew<SidebarLayout>();
 
     auto button = appRoot_->addNew<Wt::WPushButton>("Test Button");
 

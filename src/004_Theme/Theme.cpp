@@ -79,6 +79,9 @@ Theme::Theme(const std::string& name)
     , name_(name.empty() ? "tailwind" : name)
 {
     wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/000_General/General_components");
+    // wApp->require("https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1");
+    wApp->setHtmlClass("h-full bg-surface text-on-surface dark");
+    wApp->setBodyClass("h-full");
 }
 
 Theme::~Theme() = default;

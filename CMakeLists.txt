@@ -34,6 +34,14 @@ include_directories(${SOURCE_DIR})
 # FetchContent_Declare(cpr GIT_REPOSITORY https://github.com/libcpr/cpr.git GIT_TAG da40186618909b1a7363d4e4495aa899c6e0eb75) 
 # FetchContent_MakeAvailable(cpr)
 
+# TinyXML2 integration
+FetchContent_Declare(
+    tinyxml2
+    GIT_REPOSITORY https://github.com/leethomason/tinyxml2.git
+    GIT_TAG 10.0.0  # Use latest stable version
+)
+FetchContent_MakeAvailable(tinyxml2)
+
 # # Whisper.cpp integration
 # FetchContent_Declare(
 #     whisper
@@ -51,6 +59,14 @@ set(SOURCES
     
     ${SOURCE_DIR}/001_App/App.cpp
     
+    ${SOURCE_DIR}/002_Dbo/Session.cpp
+    ${SOURCE_DIR}/002_Dbo/Tables/User.cpp
+    ${SOURCE_DIR}/002_Dbo/Tables/Permission.cpp
+
+    ${SOURCE_DIR}/003_Auth/AuthWidget.cpp
+    ${SOURCE_DIR}/003_Auth/RegistrationView.cpp
+    ${SOURCE_DIR}/003_Auth/UserDetailsModel.cpp
+
     ${SOURCE_DIR}/004_Theme/Theme.cpp
     ${SOURCE_DIR}/004_Theme/DarkModeToggle.cpp
     
@@ -62,14 +78,12 @@ set(SOURCES
     # ${SOURCE_DIR}/005_Components/WhisperWrapper.cpp
     
     ${SOURCE_DIR}/006_Stylus/Stylus.cpp
-    
-    ${SOURCE_DIR}/002_Dbo/Session.cpp
-    ${SOURCE_DIR}/002_Dbo/Tables/User.cpp
-    ${SOURCE_DIR}/002_Dbo/Tables/Permission.cpp
 
-  ${SOURCE_DIR}/003_Auth/AuthWidget.cpp
-  ${SOURCE_DIR}/003_Auth/RegistrationView.cpp
-  ${SOURCE_DIR}/003_Auth/UserDetailsModel.cpp
+    ${SOURCE_DIR}/007_State/StylusState.cpp
+
+    ${SOURCE_DIR}/008_ApplicationShell/SidebarLayout.cpp
+    
+
 
     # ${SOURCE_DIR}/006-Navigation/Navigation.cpp
     
@@ -97,6 +111,7 @@ target_link_libraries(${PROJECT_NAME}
     wtdbo
     wtdbosqlite3
     wtdbopostgres
+    tinyxml2::tinyxml2
     # boost_regex
     # cpr::cpr
     # nlohmann_json::nlohmann_json
