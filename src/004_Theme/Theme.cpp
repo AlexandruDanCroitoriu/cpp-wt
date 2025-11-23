@@ -78,9 +78,18 @@ Theme::Theme(const std::string& name)
     : WTheme()
     , name_(name.empty() ? "tailwind" : name)
 {
+    // Load Tailwind Plus Elements as a module script
+    // wApp->doJavaScript(R"(
+    //     (function() {
+    //         const script = document.createElement('script');
+    //         script.type = 'module';
+    //         script.src = 'https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1';
+    //         document.head.appendChild(script);
+    //     })();
+    // )", false);
+
     wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/000_General/General_components");
-    // wApp->require("https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1");
-    wApp->setHtmlClass("h-full bg-surface text-on-surface dark");
+    wApp->setHtmlClass("h-full bg-body text-on-body dark");
     wApp->setBodyClass("h-full");
 }
 

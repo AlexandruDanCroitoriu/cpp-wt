@@ -4,7 +4,9 @@
 
 #include <Wt/Dbo/SqlConnection.h>
 #include <Wt/Dbo/backend/Sqlite3.h>
+#ifdef WT_DBO_POSTGRES
 #include <Wt/Dbo/backend/Postgres.h>
+#endif
 #include <Wt/Auth/Identity.h>
 #include <Wt/Auth/PasswordService.h>
 
@@ -25,7 +27,9 @@ Session::Session(const std::string &sqliteDb)
   Wt::log("info") << "Using SQLite database in debug mode";
   connection = std::move(sqliteConnection);
   #else
-  // Production mode - use PostgreSQL
+  // Production mode - check if PostgreSQL is available
+  #ifdef WT_DBO_POSTGRES
+  // PostgreSQL is enabled - use it for production
   const char *postgresHost = std::getenv("POSTGRES_HOST");
   if (!postgresHost) {
     throw std::runtime_error("POSTGRES_HOST environment variable is not set");
@@ -60,6 +64,12 @@ Session::Session(const std::string &sqliteDb)
   auto postgresConnection = std::make_unique<Wt::Dbo::backend::Postgres>(postgresConnectionString.c_str());
   Wt::log("info") << "Using PostgreSQL database in production mode";
   connection = std::move(postgresConnection);
+  #else
+  // PostgreSQL not available - use SQLite for production
+  auto sqliteConnection = std::make_unique<Wt::Dbo::backend::Sqlite3>(sqliteDb);
+  Wt::log("info") << "Using SQLite database in production mode (PostgreSQL not available)";
+  connection = std::move(sqliteConnection);
+  #endif
   #endif
 
   if (!connection) {

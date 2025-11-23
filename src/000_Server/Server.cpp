@@ -41,10 +41,14 @@ Server::Server(int argc, char **argv)
 
 int Server::run()
 {
- 
+    Wt::log("info") << "Server::run() - attempting to start server...";
    
     try {
-        if (start()) {
+        bool started = start();
+        Wt::log("info") << "Server::start() returned: " << (started ? "true" : "false");
+        
+        if (started) {
+            Wt::log("info") << "Server started successfully, waiting for shutdown signal...";
             int sig = WServer::waitForShutdown();
             
             Wt::log("info") << "Shutdown (signal = " << sig << ")";
@@ -52,12 +56,15 @@ int Server::run()
 
             if (sig == SIGHUP)
                 restart(argc_, argv_, environ);
+        } else {
+            Wt::log("error") << "Failed to start server";
+            return 1;
         }
     } catch (WServer::Exception& e) {
-        Wt::log("error") << e.what();
+        Wt::log("error") << "WServer::Exception: " << e.what();
         return 1;
     } catch (std::exception& e) {
-        Wt::log("error") << "exception: " << e.what();
+        Wt::log("error") << "std::exception: " << e.what();
         return 1;
     }
     return 0;

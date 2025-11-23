@@ -30,7 +30,7 @@ AuthWidget::AuthWidget(Session& session)
       wApp->globalKeyWentDown().emit(e); // Emit the global key event
   });
 
-  // processEnvironment();
+  processEnvironment();
 }
 
 std::unique_ptr<Wt::WWidget> AuthWidget::createRegistrationView(const Wt::Auth::Identity& id)

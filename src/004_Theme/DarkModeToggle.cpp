@@ -10,8 +10,8 @@ DarkModeToggle::DarkModeToggle(Session& session)
     , session_(session)
 {
     const std::string iconStyles = "[&>input]:hidden [&>input]:[&~span]:before:content-['☀'] [&>input]:checked:[&~span]:before:content-['🌙']";
-    setStyleClass(Wt::WString::tr("btn.default") + " " + Wt::WString::tr("btn.primary-outline"));
-    addStyleClass(iconStyles + " flex items-center justify-center z-20 p-2 text-md font-bold z-20 !rounded-full w-10 bg-primary/20");
+    // setStyleClass(Wt::WString::tr("btn.default") + " " + Wt::WString::tr("btn.primary-outline"));
+    addStyleClass(iconStyles + " flex items-center justify-center z-20 p-2 text-md font-bold z-20 !rounded-full w-10 bg-on-body/20");
     setChecked(wApp->htmlClass().find("dark") != std::string::npos);
 
     changed().connect(this, [this]() {

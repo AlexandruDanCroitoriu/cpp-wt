@@ -18,7 +18,7 @@
 #include <Wt/WDialog.h>
 #include <memory>
 #include <Wt/WRandom.h>
-
+#include <Wt/Auth/AuthWidget.h>
 // #include "101-Stylus/000-Utils/StylusState.h"
 
 App::App(const Wt::WEnvironment& env)
@@ -40,16 +40,21 @@ App::App(const Wt::WEnvironment& env)
     // require("https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4");
     // require("https://unpkg.com/vue@3/dist/vue.global.prod.js");
     // require("https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js");
+
     
     {
         // Load XML bundles that override the default Wt authentication templates.
         auto& bundle = wApp->messageResourceBundle();
         
+        // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/wt-auth");
         // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth");
         // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-login");
         // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-auth-strings");
         // bundle.use(docRoot() + "/static/0_stylus/xml/001_Auth/ovrwt-registration-view");
     }
+
+    wApp->messageResourceBundle().use(wApp->docRoot() + "/static/0_stylus/xml/000_General/Application_Shell");
+
     setTheme(std::make_shared<Theme>());
 
     authDialog_ = wApp->root()->addNew<Wt::WDialog>("");
@@ -67,11 +72,8 @@ App::App(const Wt::WEnvironment& env)
     authDialog_->setMinimumSize(Wt::WLength(100, Wt::LengthUnit::ViewportWidth), Wt::WLength(100, Wt::LengthUnit::ViewportHeight));
     authDialog_->setMaximumSize(Wt::WLength(100, Wt::LengthUnit::ViewportWidth), Wt::WLength(100, Wt::LengthUnit::ViewportHeight));
     authDialog_->setStyleClass("absolute top-0 left-0 right-0 bottom-0 w-screen h-screen !bg-white dark:!bg-gray-900");
-    // authDialog_->setMargin(Wt::WLength("-21em"), Wt::Side::Left); // .Wt-form width
-    // authDialog_->setMargin(Wt::WLength("-200px"), Wt::Side::Top); // ???
-    // authDialog_->contents()->setStyleClass("min-h-screen min-w-screen m-1 p-1 flex items-center justify-center");
     authWidget_ = authDialog_->contents()->addWidget(std::make_unique<AuthWidget>(session_));
-    // authWidget_->addStyleClass("w-full max-w-md bg-white text-gray-900 border border-gray-200 rounded-xl shadow-lg p-6 space-y-4 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700 transition-colors");
+
     appRoot_ = root()->addNew<Wt::WContainerWidget>();
     stylus_ = root()->addChild(std::make_unique<Stylus::Stylus>(session_));
     
@@ -99,6 +101,8 @@ App::App(const Wt::WEnvironment& env)
         }
 
     });
+
+    wApp->internalPathChanged().emit(wApp->internalPath());
 }
 
 void App::authEvent() {
@@ -148,14 +152,12 @@ void App::createApp()
         transaction.commit();
     }
 
-    auto sidebarLayout = appRoot_->addNew<SidebarLayout>();
+    auto sidebarLayout = appRoot_->addNew<SidebarLayout>(session_);
 
-    auto button = appRoot_->addNew<Wt::WPushButton>("Test Button");
 
 
     // auto theme_switcher = appRoot_->addNew<ThemeSwitcher>(session_);
     // theme_switcher->addStyleClass("fixed bottom-16 right-3");
-    auto dark_mode_toggle = appRoot_->addNew<DarkModeToggle>(session_);
     // dark_mode_toggle->addStyleClass("fixed bottom-3 right-3");
 
     // auto navbar = appRoot_->addNew<Navigation>(session_);

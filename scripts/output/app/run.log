@@ -1,125 +1,82 @@
-[2025-11-22 03:17:11] [INFO] Starting run...
-[2025-11-22 03:17:11] [INFO] Project root: /home/alex/github-repos/cpp-wt
-[2025-11-22 03:17:11] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/run.log
-[2025-11-22 03:17:11] [INFO] Selected build type: debug
-[2025-11-22 03:17:11] [INFO] Launching debug build using make run
--- Configuring done
--- Generating done
--- Build files have been written to: /home/alex/github-repos/cpp-wt/build/debug
-Consolidate compiler generated dependencies of target tinyxml2
+[2025-11-23 05:37:06] [INFO] Starting run...
+[2025-11-23 05:37:06] [INFO] Project root: /home/alex/github-repos/cpp-wt
+[2025-11-23 05:37:06] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/run.log
+[2025-11-23 05:37:06] [INFO] Selected build type: debug
+[2025-11-23 05:37:06] [INFO] Launching debug build using make run
 [ 10%] Built target tinyxml2
 Consolidate compiler generated dependencies of target app
-[ 15%] Building CXX object CMakeFiles/app.dir/src/001_App/App.cpp.o
-[ 21%] Building CXX object CMakeFiles/app.dir/src/008_ApplicationShell/SidebarLayout.cpp.o
-[ 26%] Linking CXX executable app
+[ 15%] Building CXX object CMakeFiles/app.dir/src/003_Auth/AuthWidget.cpp.o
+[ 21%] Linking CXX executable app
 [100%] Built target app
 Starting Wt server...
-[2025-Nov-22 03:17:18.911] 105920 - [info] "config: reading Wt config file: ../../wt_config.xml (location = './app')"
-[2025-Nov-22 03:17:18.913] 105920 - [info] "WServer/wthttp: initializing built-in wthttpd"
-[2025-Nov-22 03:17:18.919] 105920 - [info] "wthttp: started server: http://0.0.0.0:9020"
-[2025-Nov-22 03:17:21.255] 105920 - [info] "Wt: session created (#sessions = 1)"
-[2025-Nov-22 03:17:21.256] 105920 [/ 7035HDNEjMbOjJBq] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
-[2025-Nov-22 03:17:21.258] 105920 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2180"
-[2025-Nov-22 03:17:21.258] 105920 - [info] "WebRequest: took 3.486 ms"
-[2025-Nov-22 03:17:21.374] 105920 - [access] "wthttp: 127.0.0.1   GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1 404 85"
-[2025-Nov-22 03:17:21.578] 105920 [/ 7035HDNEjMbOjJBq] [info] "Using SQLite database in debug mode"
+[2025-Nov-23 05:37:16.251] 73214 - [info] "config: reading Wt config file: ../../wt_config.xml (location = './app')"
+[2025-Nov-23 05:37:16.252] 73214 - [info] "Server::run() - attempting to start server..."
+[2025-Nov-23 05:37:16.252] 73214 - [info] "WServer/wthttp: initializing built-in wthttpd"
+[2025-Nov-23 05:37:16.255] 73214 - [info] "wthttp: started server: http://0.0.0.0:9020"
+[2025-Nov-23 05:37:16.256] 73214 - [info] "Server::start() returned: true"
+[2025-Nov-23 05:37:16.256] 73214 - [info] "Server started successfully, waiting for shutdown signal..."
+[2025-Nov-23 05:37:18.046] 73214 - [info] "Wt: session created (#sessions = 1)"
+[2025-Nov-23 05:37:18.046] 73214 [/ iIwp1riuAJBNjiOD] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+[2025-Nov-23 05:37:18.049] 73214 - [access] "wthttp: 127.0.0.1   GET /?_=/home HTTP/1.1 200 2196"
+[2025-Nov-23 05:37:18.049] 73214 - [info] "WebRequest: took 3.273 ms"
+[2025-Nov-23 05:37:18.141] 73214 - [access] "wthttp: 127.0.0.1   GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1 404 85"
+[2025-Nov-23 05:37:18.321] 73214 [/ iIwp1riuAJBNjiOD] [info] "Using SQLite database in debug mode"
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: rollback transaction
-[2025-Nov-22 03:17:21.601] 105920 [/ 7035HDNEjMbOjJBq] [info] "Using existing database"
+[2025-Nov-23 05:37:18.357] 73214 [/ iIwp1riuAJBNjiOD] [info] "Using existing database"
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: select "id", "version", "name" from "permission"  where (name = ?)
 Dbo.backend.Sqlite3: commit transaction
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where (provider = ? AND identity = ?)
-[2025-Nov-22 03:17:21.601] 105920 [/ 7035HDNEjMbOjJBq] [info] "Admin user 'maxuli' already exists, skipping creation."
+[2025-Nov-23 05:37:18.359] 73214 [/ iIwp1riuAJBNjiOD] [info] "Admin user 'maxuli' already exists, skipping creation."
 Dbo.backend.Sqlite3: commit transaction
-[2025-Nov-22 03:17:21.602] 105920 [/ 7035HDNEjMbOjJBq] [warning] "WApplication: Deploy-path ends with '/', using /?_= for internal paths"
-[2025-Nov-22 03:17:21.603] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=7035HDNEjMbOjJBq&request=style&page=1 HTTP/1.1 200 120"
-[2025-Nov-22 03:17:21.603] 105920 - [info] "WebRequest: took 230.877 ms"
-[2025-Nov-22 03:17:21.613] 105920 - [access] "wthttp: 127.0.0.1   GET /resources/webkit-transitions.css HTTP/1.1 200 7138"
-[2025-Nov-22 03:17:21.616] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=7035HDNEjMbOjJBq&sid=4051829502&webGL=true&scrW=1920&scrH=1080&tz=120&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=3895392867 HTTP/1.1 200 19580"
-[2025-Nov-22 03:17:21.616] 105920 - [info] "WebRequest: took 39.068 ms"
-[2025-Nov-22 03:17:21.629] 105920 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=3SqnyOP6uvzf3wU2 HTTP/1.1 200 37571"
-[2025-Nov-22 03:17:21.629] 105920 - [access] "wthttp: 127.0.0.1   GET /resources/form.css HTTP/1.1 200 1718"
-[2025-Nov-22 03:17:22.403] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=7035HDNEjMbOjJBq HTTP/1.1 200 6741"
-[2025-Nov-22 03:17:22.403] 105920 - [info] "WebRequest: took 0.843 ms"
-[2025-Nov-22 03:17:22.739] 105920 - [access] "wthttp: 127.0.0.1   GET /static/favicon.svg HTTP/1.1 200 2938"
-[2025-Nov-22 03:17:26.426] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=7035HDNEjMbOjJBq HTTP/1.1 200 48"
-[2025-Nov-22 03:17:26.426] 105920 - [info] "WebRequest: took 0.575 ms"
-[2025-Nov-22 03:17:38.655] 105920 - [info] "Wt: session created (#sessions = 2)"
-[2025-Nov-22 03:17:38.655] 105920 [/ HkrB8fQVibjkT00c] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
-[2025-Nov-22 03:17:38.655] 105920 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2182"
-[2025-Nov-22 03:17:38.655] 105920 - [info] "WebRequest: took 0.756 ms"
-[2025-Nov-22 03:17:38.963] 105920 [/ HkrB8fQVibjkT00c] [info] "Using SQLite database in debug mode"
+[2025-Nov-23 05:37:18.359] 73214 [/ iIwp1riuAJBNjiOD] [warning] "WApplication: Deploy-path ends with '/', using /?_= for internal paths"
+[2025-Nov-23 05:37:18.364] 73214 - [access] "wthttp: 127.0.0.1   GET /?wtd=iIwp1riuAJBNjiOD&request=style&page=1 HTTP/1.1 200 120"
+[2025-Nov-23 05:37:18.364] 73214 - [info] "WebRequest: took 224.404 ms"
+[2025-Nov-23 05:37:18.384] 73214 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=Nvpmt1qXo0oRoeUM HTTP/1.1 200 40327"
+[2025-Nov-23 05:37:18.386] 73214 - [access] "wthttp: 127.0.0.1   GET /?wtd=iIwp1riuAJBNjiOD&sid=512822399&webGL=true&scrW=1920&scrH=1080&tz=120&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=1663958674 HTTP/1.1 200 21855"
+[2025-Nov-23 05:37:18.386] 73214 - [info] "WebRequest: took 65.84 ms"
+[2025-Nov-23 05:37:18.395] 73214 - [access] "wthttp: 127.0.0.1   GET /resources/webkit-transitions.css HTTP/1.1 200 7138"
+[2025-Nov-23 05:37:18.396] 73214 - [access] "wthttp: 127.0.0.1   GET /resources/form.css HTTP/1.1 200 1718"
+[2025-Nov-23 05:37:19.199] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=iIwp1riuAJBNjiOD HTTP/1.1 200 6202"
+[2025-Nov-23 05:37:19.199] 73214 - [info] "WebRequest: took 0.996 ms"
+[2025-Nov-23 05:37:27.278] 73214 - [access] "wthttp: 127.0.0.1   GET /static/favicon.svg HTTP/1.1 200 2938"
+[2025-Nov-23 05:37:28.315] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=iIwp1riuAJBNjiOD HTTP/1.1 200 47"
+[2025-Nov-23 05:37:28.315] 73214 - [info] "WebRequest: took 0.677 ms"
+[2025-Nov-23 05:37:29.134] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=iIwp1riuAJBNjiOD HTTP/1.1 200 47"
+[2025-Nov-23 05:37:29.134] 73214 - [info] "WebRequest: took 0.445 ms"
+[2025-Nov-23 05:37:29.337] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=iIwp1riuAJBNjiOD HTTP/1.1 200 463"
+[2025-Nov-23 05:37:29.337] 73214 - [info] "WebRequest: took 0.544 ms"
 Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: rollback transaction
-[2025-Nov-22 03:17:38.973] 105920 [/ HkrB8fQVibjkT00c] [info] "Using existing database"
+Dbo.backend.Sqlite3: select u."id" as col0, u."version" as col1, u."user_id" as col2, u."password_hash" as col3, u."password_method" as col4, u."password_salt" as col5, u."status" as col6, u."failed_login_attempts" as col7, u."last_login_attempt" as col8, u."email" as col9, u."unverified_email" as col10, u."email_token" as col11, u."email_token_expires" as col12, u."email_token_role" as col13 from "auth_info" u join "auth_identity" i on u.id = i."auth_info_id" where (i."provider" = ?) and (i."identity" = ?)
+Dbo.backend.Sqlite3: select "version", "user_id", "password_hash", "password_method", "password_salt", "status", "failed_login_attempts", "last_login_attempt", "email", "unverified_email", "email_token", "email_token_expires", "email_token_role" from "auth_info" where "id" = ?
+Dbo.backend.Sqlite3: select "version", "user_id", "password_hash", "password_method", "password_salt", "status", "failed_login_attempts", "last_login_attempt", "email", "unverified_email", "email_token", "email_token_expires", "email_token_role" from "auth_info" where "id" = ?
+Dbo.backend.Sqlite3: update "auth_info" set "version" = ?, "user_id" = ?, "password_hash" = ?, "password_method" = ?, "password_salt" = ?, "status" = ?, "failed_login_attempts" = ?, "last_login_attempt" = ?, "email" = ?, "unverified_email" = ?, "email_token" = ?, "email_token_expires" = ?, "email_token_role" = ? where "id" = ? and "version" = ?
+Dbo.backend.Sqlite3: commit transaction
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where ("auth_info_id" = ?) and ("provider" = ?)
+Dbo.backend.Sqlite3: commit transaction
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where ("auth_info_id" = ?) and ("provider" = ?)
+Dbo.backend.Sqlite3: commit transaction
+[2025-Nov-23 05:37:31.351] 73214 [/ YCDs9PQDFbj45Kdi] [info] "Wt: new session id for iIwp1riuAJBNjiOD"
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where ("auth_info_id" = ?) and ("provider" = ?)
+Dbo.backend.Sqlite3: commit transaction
+Dbo.backend.Sqlite3: begin transaction
+Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where ("auth_info_id" = ?) and ("provider" = ?)
+Dbo.backend.Sqlite3: commit transaction
 Dbo.backend.Sqlite3: begin transaction
 Dbo.backend.Sqlite3: select "id", "version", "name" from "permission"  where (name = ?)
+Dbo.backend.Sqlite3: select "version", "name", "ui_dark_mode" from "user" where "id" = ?
+Dbo.backend.Sqlite3: select "id", "version", "name" from "permission" join "users_permissions" on "users_permissions"."permission_id" = "permission"."id" where "users_permissions"."user_id" = ?
 Dbo.backend.Sqlite3: commit transaction
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where (provider = ? AND identity = ?)
-[2025-Nov-22 03:17:38.974] 105920 [/ HkrB8fQVibjkT00c] [info] "Admin user 'maxuli' already exists, skipping creation."
-Dbo.backend.Sqlite3: commit transaction
-[2025-Nov-22 03:17:38.974] 105920 [/ HkrB8fQVibjkT00c] [warning] "WApplication: Deploy-path ends with '/', using /?_= for internal paths"
-[2025-Nov-22 03:17:38.984] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=HkrB8fQVibjkT00c&request=style&page=1 HTTP/1.1 200 120"
-[2025-Nov-22 03:17:38.984] 105920 - [info] "WebRequest: took 239.284 ms"
-[2025-Nov-22 03:17:38.988] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=HkrB8fQVibjkT00c&sid=2451463951&webGL=true&scrW=1920&scrH=1080&tz=120&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=4293273878 HTTP/1.1 200 19581"
-[2025-Nov-22 03:17:38.988] 105920 - [info] "WebRequest: took 25.418 ms"
-[2025-Nov-22 03:17:39.005] 105920 - [access] "wthttp: 127.0.0.1   GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1 404 85"
-[2025-Nov-22 03:17:39.015] 105920 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=cwEyKKkTsCtmRzyG HTTP/1.1 200 37571"
-[2025-Nov-22 03:17:39.017] 105920 - [access] "wthttp: 127.0.0.1   GET /resources/webkit-transitions.css HTTP/1.1 200 7138"
-[2025-Nov-22 03:17:39.020] 105920 - [access] "wthttp: 127.0.0.1   GET /resources/form.css HTTP/1.1 200 1718"
-[2025-Nov-22 03:17:39.803] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=HkrB8fQVibjkT00c HTTP/1.1 200 6746"
-[2025-Nov-22 03:17:39.803] 105920 - [info] "WebRequest: took 1.132 ms"
-[2025-Nov-22 03:17:40.193] 105920 - [access] "wthttp: 127.0.0.1   GET /static/favicon.svg HTTP/1.1 200 2938"
-[2025-Nov-22 03:17:43.026] 105920 - [info] "Wt: session created (#sessions = 3)"
-[2025-Nov-22 03:17:43.026] 105920 [/ sM7dD9Th42UIruos] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
-[2025-Nov-22 03:17:43.026] 105920 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2177"
-[2025-Nov-22 03:17:43.026] 105920 - [info] "WebRequest: took 0.812 ms"
-[2025-Nov-22 03:17:43.205] 105920 [/ sM7dD9Th42UIruos] [info] "Using SQLite database in debug mode"
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: rollback transaction
-[2025-Nov-22 03:17:43.217] 105920 [/ sM7dD9Th42UIruos] [info] "Using existing database"
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: select "id", "version", "name" from "permission"  where (name = ?)
-Dbo.backend.Sqlite3: commit transaction
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where (provider = ? AND identity = ?)
-[2025-Nov-22 03:17:43.218] 105920 [/ sM7dD9Th42UIruos] [info] "Admin user 'maxuli' already exists, skipping creation."
-Dbo.backend.Sqlite3: commit transaction
-[2025-Nov-22 03:17:43.218] 105920 [/ sM7dD9Th42UIruos] [warning] "WApplication: Deploy-path ends with '/', using /?_= for internal paths"
-[2025-Nov-22 03:17:43.219] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=sM7dD9Th42UIruos&request=style&page=1 HTTP/1.1 200 120"
-[2025-Nov-22 03:17:43.220] 105920 - [info] "WebRequest: took 155.611 ms"
-[2025-Nov-22 03:17:43.227] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=sM7dD9Th42UIruos&sid=959639781&webGL=true&scrW=1920&scrH=1080&tz=120&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=3371838066 HTTP/1.1 200 19581"
-[2025-Nov-22 03:17:43.227] 105920 - [info] "WebRequest: took 22.574 ms"
-[2025-Nov-22 03:17:43.232] 105920 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=krDthgdZ6SvrGCy8 HTTP/1.1 200 37571"
-[2025-Nov-22 03:17:43.937] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=sM7dD9Th42UIruos HTTP/1.1 200 6758"
-[2025-Nov-22 03:17:43.937] 105920 - [info] "WebRequest: took 0.935 ms"
-[2025-Nov-22 03:17:46.566] 105920 - [info] "Wt: session created (#sessions = 4)"
-[2025-Nov-22 03:17:46.567] 105920 [/ yWz1DCattNM3MsXb] [info] "WEnvironment: UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
-[2025-Nov-22 03:17:46.567] 105920 - [access] "wthttp: 127.0.0.1   GET / HTTP/1.1 200 2178"
-[2025-Nov-22 03:17:46.567] 105920 - [info] "WebRequest: took 0.723 ms"
-[2025-Nov-22 03:17:46.733] 105920 [/ yWz1DCattNM3MsXb] [info] "Using SQLite database in debug mode"
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: rollback transaction
-[2025-Nov-22 03:17:46.742] 105920 [/ yWz1DCattNM3MsXb] [info] "Using existing database"
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: select "id", "version", "name" from "permission"  where (name = ?)
-Dbo.backend.Sqlite3: commit transaction
-Dbo.backend.Sqlite3: begin transaction
-Dbo.backend.Sqlite3: select "id", "version", "auth_info_id", "provider", "identity" from "auth_identity"  where (provider = ? AND identity = ?)
-[2025-Nov-22 03:17:46.743] 105920 [/ yWz1DCattNM3MsXb] [info] "Admin user 'maxuli' already exists, skipping creation."
-Dbo.backend.Sqlite3: commit transaction
-[2025-Nov-22 03:17:46.743] 105920 [/ yWz1DCattNM3MsXb] [warning] "WApplication: Deploy-path ends with '/', using /?_= for internal paths"
-[2025-Nov-22 03:17:46.745] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=yWz1DCattNM3MsXb&request=style&page=1 HTTP/1.1 200 120"
-[2025-Nov-22 03:17:46.745] 105920 - [info] "WebRequest: took 143.046 ms"
-[2025-Nov-22 03:17:46.756] 105920 - [access] "wthttp: 127.0.0.1   GET /?wtd=yWz1DCattNM3MsXb&sid=1360143444&webGL=true&scrW=1920&scrH=1080&tz=120&tzS=Europe%2FBucharest&htmlHistory=true&deployPath=%2F&request=script&rand=754747452 HTTP/1.1 200 19582"
-[2025-Nov-22 03:17:46.756] 105920 - [info] "WebRequest: took 24.188 ms"
-[2025-Nov-22 03:17:46.766] 105920 - [access] "wthttp: 127.0.0.1   GET /static/css/tailwind.css?v=xaHq243Em9W9yVbU HTTP/1.1 200 37571"
-[2025-Nov-22 03:17:47.464] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=yWz1DCattNM3MsXb HTTP/1.1 200 6742"
-[2025-Nov-22 03:17:47.464] 105920 - [info] "WebRequest: took 0.988 ms"
-[2025-Nov-22 03:22:39.554] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=HkrB8fQVibjkT00c HTTP/1.1 200 48"
-[2025-Nov-22 03:22:39.554] 105920 - [info] "WebRequest: took 0.455 ms"
-[2025-Nov-22 03:22:48.588] 105920 - [access] "wthttp: 127.0.0.1   POST /?wtd=yWz1DCattNM3MsXb HTTP/1.1 200 48"
-[2025-Nov-22 03:22:48.588] 105920 - [info] "WebRequest: took 0.582 ms"
+[2025-Nov-23 05:37:31.360] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=iIwp1riuAJBNjiOD HTTP/1.1 200 4327"
+[2025-Nov-23 05:37:31.360] 73214 - [info] "WebRequest: took 342.193 ms"
+[2025-Nov-23 05:37:32.968] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=YCDs9PQDFbj45Kdi HTTP/1.1 200 47"
+[2025-Nov-23 05:37:32.968] 73214 - [info] "WebRequest: took 0.455 ms"
+[2025-Nov-23 05:37:33.136] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=YCDs9PQDFbj45Kdi HTTP/1.1 200 191"
+[2025-Nov-23 05:37:33.136] 73214 - [info] "WebRequest: took 0.559 ms"
+[2025-Nov-23 05:38:19.435] 73214 - [access] "wthttp: 127.0.0.1   POST /?wtd=YCDs9PQDFbj45Kdi HTTP/1.1 200 47"
+[2025-Nov-23 05:38:19.436] 73214 - [info] "WebRequest: took 0.429 ms"

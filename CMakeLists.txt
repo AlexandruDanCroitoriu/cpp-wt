@@ -105,12 +105,24 @@ target_compile_definitions(${PROJECT_NAME}
     $<$<CONFIG:Release>:RELEASE>
 )
 
+# Check if wtdbopostgres library is available
+find_library(WTDBOPOSTGRES_LIB wtdbopostgres)
+
+if(WTDBOPOSTGRES_LIB)
+    message(STATUS "PostgreSQL backend found: ${WTDBOPOSTGRES_LIB}")
+    target_compile_definitions(${PROJECT_NAME} PRIVATE WT_DBO_POSTGRES)
+    set(DBO_POSTGRES_LIB wtdbopostgres)
+else()
+    message(STATUS "PostgreSQL backend not found - will use SQLite only")
+    set(DBO_POSTGRES_LIB "")
+endif()
+
 target_link_libraries(${PROJECT_NAME} 
     wthttp
     wt
     wtdbo
     wtdbosqlite3
-    wtdbopostgres
+    ${DBO_POSTGRES_LIB}
     tinyxml2::tinyxml2
     # boost_regex
     # cpr::cpr

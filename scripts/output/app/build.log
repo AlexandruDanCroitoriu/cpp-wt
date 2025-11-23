@@ -1,25 +1,29 @@
-[2025-10-23 11:51:07] [INFO] Starting build process...
-[2025-10-23 11:51:07] [INFO] Build type: debug
-[2025-10-23 11:51:07] [INFO] Clean build: false
-[2025-10-23 11:51:07] [INFO] Starting debug build process...
-[2025-10-23 11:51:07] [INFO] Build directory: /home/alex/github-repos/cpp-wt/build/debug
-[2025-10-23 11:51:07] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/build.log
-[2025-10-23 11:51:07] [INFO] Configuring CMake for debug build...
+[2025-11-22 20:47:52] [INFO] Starting build process...
+[2025-11-22 20:47:52] [INFO] Build type: debug
+[2025-11-22 20:47:52] [INFO] Clean build: false
+[2025-11-22 20:47:52] [INFO] Starting debug build process...
+[2025-11-22 20:47:52] [INFO] Build directory: /home/alex/github-repos/cpp-wt/build/debug
+[2025-11-22 20:47:52] [INFO] Log file: /home/alex/github-repos/cpp-wt/scripts/output/app/build.log
+[2025-11-22 20:47:52] [INFO] Configuring CMake for debug build...
+-- PostgreSQL backend found: /usr/local/lib/libwtdbopostgres.so
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/alex/github-repos/cpp-wt/build/debug
-[2025-10-23 11:51:08] [SUCCESS] CMake configuration completed successfully
-[2025-10-23 11:51:08] [INFO] Building with 4 parallel jobs...
+[2025-11-22 20:47:52] [SUCCESS] CMake configuration completed successfully
+[2025-11-22 20:47:52] [INFO] Building with 4 parallel jobs...
 Consolidate compiler generated dependencies of target tinyxml2
-[ 10%] Built target tinyxml2
+[  9%] Built target tinyxml2
 Consolidate compiler generated dependencies of target xmltest
-[ 20%] Built target xmltest
+[ 19%] Built target xmltest
 Consolidate compiler generated dependencies of target app
+[ 23%] Building CXX object CMakeFiles/app.dir/src/001_App/App.cpp.o
+[ 28%] Building CXX object CMakeFiles/app.dir/src/008_ApplicationShell/SidebarLayout.cpp.o
+[ 33%] Linking CXX executable app
 [100%] Built target app
-[2025-10-23 11:51:08] [SUCCESS] debug build completed successfully!
-[2025-10-23 11:51:08] [INFO] Executable location: /home/alex/github-repos/cpp-wt/build/debug/app
-[2025-10-23 11:51:08] [SUCCESS] Application binary created successfully
-[2025-10-23 11:51:08] [INFO] Binary size: 11M
-[2025-10-23 11:51:08] [SUCCESS] Build completed successfully!
-[2025-10-23 11:51:08] [INFO] You can now run the application using:
-[2025-10-23 11:51:08] [INFO]   ./scripts/app/run.sh --debug
+[2025-11-22 20:47:58] [SUCCESS] debug build completed successfully!
+[2025-11-22 20:47:58] [INFO] Executable location: /home/alex/github-repos/cpp-wt/build/debug/app
+[2025-11-22 20:47:58] [SUCCESS] Application binary created successfully
+[2025-11-22 20:47:58] [INFO] Binary size: 11M
+[2025-11-22 20:47:58] [SUCCESS] Build completed successfully!
+[2025-11-22 20:47:58] [INFO] You can now run the application using:
+[2025-11-22 20:47:58] [INFO]   ./scripts/app/run.sh --debug
